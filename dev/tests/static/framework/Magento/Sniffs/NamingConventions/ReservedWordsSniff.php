@@ -61,7 +61,7 @@ class ReservedWordsSniff implements PHP_CodeSniffer_Sniff
             $namespacePart = $tokens[$stackPtr]['content'];
             if (isset($this->reservedWords[strtolower($namespacePart)])) {
                 $sourceFile->addError(
-                    'Cannot use "%s" in namespace as it is reserved in PHP %s',
+                    'Cannot use "%s" in namespace as it is reserved since PHP %s',
                     $stackPtr,
                     'Namespace',
                     [$namespacePart, $this->reservedWords[$namespacePart]]
@@ -85,7 +85,7 @@ class ReservedWordsSniff implements PHP_CodeSniffer_Sniff
         $className = strtolower($tokens[$stackPtr]['content']);
         if (isset($this->reservedWords[$className])) {
             $sourceFile->addError(
-                'Cannot use "%s" as class name as it is reserved in PHP %s',
+                'Cannot use "%s" as class name as it is reserved since PHP %s',
                 $stackPtr,
                 'Class',
                 [$className, $this->reservedWords[$className]]
