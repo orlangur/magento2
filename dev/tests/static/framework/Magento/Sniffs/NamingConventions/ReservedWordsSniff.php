@@ -53,15 +53,15 @@ class ReservedWordsSniff implements PHP_CodeSniffer_Sniff
     {
         $stackPtr += 2;
         $tokens = $sourceFile->getTokens();
-        while ($tokens[$stackPtr]['code'] !== T_SEMICOLON) {
+        while ($stackPtr < $sourceFile->numTokens && $tokens[$stackPtr]['code'] !== T_SEMICOLON) {
             if ($tokens[$stackPtr]['code'] === T_WHITESPACE || $tokens[$stackPtr]['code'] === T_NS_SEPARATOR) {
                 $stackPtr++; //skip "namespace" and whitespace
                 continue;
             }
-            $namespacePart = strtolower($tokens[$stackPtr]['content']);
-            if (isset($this->reservedWords[$namespacePart])) {
+            $namespacePart = $tokens[$stackPtr]['content'];
+            if (isset($this->reservedWords[strtolower($namespacePart)])) {
                 $sourceFile->addError(
-                    'Namespace part "%s" is a reserved word in PHP %s',
+                    'Cannot use "%s" in namespace as it is reserved in PHP %s',
                     $stackPtr,
                     'Namespace',
                     [$namespacePart, $this->reservedWords[$namespacePart]]
@@ -85,7 +85,7 @@ class ReservedWordsSniff implements PHP_CodeSniffer_Sniff
         $className = strtolower($tokens[$stackPtr]['content']);
         if (isset($this->reservedWords[$className])) {
             $sourceFile->addError(
-                'Class name "%s" is a reserved word in PHP %s',
+                'Cannot use "%s" as class name as it is reserved in PHP %s',
                 $stackPtr,
                 'Class',
                 [$className, $this->reservedWords[$className]]
