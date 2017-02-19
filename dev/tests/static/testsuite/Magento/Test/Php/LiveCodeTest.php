@@ -197,7 +197,6 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
      */
     public function testCodeStylePsr2()
     {
-        $this->markTestIncomplete();
         $reportFile = self::$reportDir . '/phpcs_psr2_report.txt';
         $wrapper = new Wrapper();
         $codeSniffer = new CodeSniffer('PSR2', $reportFile, $wrapper);
@@ -257,7 +256,6 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
      */
     public function testAnnotationStandard()
     {
-        $this->markTestIncomplete();
         $reportFile = self::$reportDir . '/phpcs_annotations_report.txt';
         $wrapper = new Wrapper();
         $codeSniffer = new CodeSniffer(
