@@ -3,11 +3,11 @@
  * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-namespace Magento\Sales\Controller\Adminhtml\Void\Creditmemo;
+namespace Magento\Sales\Controller\Adminhtml\Order\Creditmemo;
 
 use Magento\Backend\App\Action;
 
-class VoidAction extends \Magento\Backend\App\Action
+class Void extends \Magento\Backend\App\Action
 {
     /**
      * Authorization level of a basic admin session
