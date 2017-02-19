@@ -18,9 +18,6 @@ env:
     - INTEGRATION_SETS=3
   matrix:
     - TEST_SUITE=unit
-    - TEST_SUITE=integration INTEGRATION_INDEX=1
-    - TEST_SUITE=integration INTEGRATION_INDEX=2
-    - TEST_SUITE=integration INTEGRATION_INDEX=3
     - TEST_SUITE=static
 cache:
   apt: true
@@ -28,9 +25,6 @@ cache:
 matrix:
   allow_failures:
     - php: 7.1
-  exclude:
-    - php: 7.0
-      env: TEST_SUITE=static
 before_install: ./dev/travis/before_install.sh
 install: test ${TRAVIS_PHP_VERSION:0:3} = "7.1" && composer install --no-interaction --prefer-dist --ignore-platform-reqs || composer install --no-interaction --prefer-dist
 before_script: ./dev/travis/before_script.sh
