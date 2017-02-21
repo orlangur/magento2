@@ -198,32 +198,14 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
         return $filtered;
     }
 
-    /**
-     * @return void
-     */
     public function testNoViolationsDetectedByPhpCodeSniffer()
     {
         $reportFile = self::$reportDir . '/phpcs_psr2_report.txt';
-        $wrapper = new Wrapper();
-        $codeSniffer = new CodeSniffer('PSR2', $reportFile, $wrapper);
-        if (!$codeSniffer->canRun()) {
-            $this->markTestSkipped('PHP Code Sniffer is not installed.');
-        }
-        if (version_compare($wrapper->version(), '1.4.7') === -1) {
-            $this->markTestSkipped('PHP Code Sniffer Build Too Old.');
-        }
-
-        $codeSniffer->setExtensions(['php', 'phtml']);
-        $result = $codeSniffer->run($this->getFullWhitelist());
-
-        $output = "";
-        if (file_exists($reportFile)) {
-            $output = file_get_contents($reportFile);
-        }
+        $codeSniffer = new CodeSniffer('PSR2', $reportFile, new Wrapper());
         $this->assertEquals(
             0,
-            $result,
-            "PHP Code Sniffer has found {$result} error(s): " . PHP_EOL . $output
+            $result = $codeSniffer->run($this->getFullWhitelist()),
+            "PHP CodeSniffer detected {$result} violation(s): " . PHP_EOL . file_get_contents($reportFile)
         );
     }
 

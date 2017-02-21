@@ -40,7 +40,7 @@ class CodeSniffer implements ToolInterface, ExtensionInterface
      *
      * @var array
      */
-    private $extensions = ['php'];
+    private $extensions = ['php', 'phtml'];
 
     /**
      * Constructor
