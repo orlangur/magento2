@@ -7,6 +7,8 @@
 -->
 <ruleset name="Magento">
     <description>Magento coding standard.</description>
+    <rule ref="PSR2"/>
+
     <rule ref="Zend.Files.ClosingTag"/>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
     <rule ref="Generic.WhiteSpace.ScopeIndent"/>
