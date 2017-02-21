@@ -212,7 +212,6 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
 
     public function testNoViolationsDetectedByPhpMessDetector()
     {
-        $this->markTestIncomplete();
         $reportFile = self::$reportDir . '/phpmd_report.txt';
         $codeMessDetector = new CodeMessDetector(realpath(__DIR__ . '/_files/phpmd/ruleset.xml'), $reportFile);
 
