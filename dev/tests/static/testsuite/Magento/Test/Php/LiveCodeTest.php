@@ -200,7 +200,7 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
 
     public function testNoViolationsDetectedByPhpCodeSniffer()
     {
-        $reportFile = self::$reportDir . '/phpcs_psr2_report.txt';
+        $reportFile = self::$reportDir . '/phpcs_report.txt';
         $codeSniffer = new CodeSniffer('PSR2', $reportFile, new Wrapper());
         $this->assertEquals(
             0,
@@ -209,69 +209,6 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    /**
-     * Run the magento specific coding standards on the code
-     *
-     * @return void
-     */
-    public function testCodeStyle()
-    {
-        $reportFile = self::$reportDir . '/phpcs_report.txt';
-        $wrapper = new Wrapper();
-        $codeSniffer = new CodeSniffer(realpath(__DIR__ . '/_files/phpcs'), $reportFile, $wrapper);
-        if (!$codeSniffer->canRun()) {
-            $this->markTestSkipped('PHP Code Sniffer is not installed.');
-        }
-        $codeSniffer->setExtensions(['php', 'phtml']);
-        $result = $codeSniffer->run($this->getFullWhitelist());
-
-        $output = "";
-        if (file_exists($reportFile)) {
-            $output = file_get_contents($reportFile);
-        }
-
-        $this->assertEquals(
-            0,
-            $result,
-            "PHP Code Sniffer has found {$result} error(s): " . PHP_EOL . $output
-        );
-    }
-
-    /**
-     * Run the annotations sniffs on the code
-     *
-     * @return void
-     * @todo Combine with normal code style at some point.
-     */
-    public function testAnnotationStandard()
-    {
-        $reportFile = self::$reportDir . '/phpcs_annotations_report.txt';
-        $wrapper = new Wrapper();
-        $codeSniffer = new CodeSniffer(
-            realpath(__DIR__ . '/../../../../framework/Magento/ruleset.xml'),
-            $reportFile,
-            $wrapper
-        );
-        if (!$codeSniffer->canRun()) {
-            $this->markTestSkipped('PHP Code Sniffer is not installed.');
-        }
-
-        $codeSniffer->setExtensions(['php', 'phtml']);
-        $result = $codeSniffer->run($this->getFullWhitelist());
-        $output = "";
-        if (file_exists($reportFile)) {
-            $output = file_get_contents($reportFile);
-        }
-        $this->assertEquals(
-            0,
-            $result,
-            "PHP Code Sniffer has found {$result} error(s): " . PHP_EOL . $output
-        );
-    }
-
-    /**
-     * @return void
-     */
     public function testNoViolationsDetectedByPhpMessDetector()
     {
         $reportFile = self::$reportDir . '/phpmd_report.txt';
@@ -301,9 +238,6 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
         }
     }
 
-    /**
-     * @return void
-     */
     public function testNoViolationsDetectedByPhpCopyPasteDetector()
     {
         $reportFile = self::$reportDir . '/phpcpd_report.xml';
