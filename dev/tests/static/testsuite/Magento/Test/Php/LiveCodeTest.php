@@ -201,11 +201,11 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
     public function testNoViolationsDetectedByPhpCodeSniffer()
     {
         $reportFile = self::$reportDir . '/phpcs_report.txt';
-        $codeSniffer = new CodeSniffer('PSR2', $reportFile, new Wrapper());
+        $codeSniffer = new CodeSniffer('Magento', $reportFile, new Wrapper());
         $this->assertEquals(
             0,
             $result = $codeSniffer->run($this->getFullWhitelist()),
-            "PHP CodeSniffer detected {$result} violation(s): " . PHP_EOL . file_get_contents($reportFile)
+            "PHP Code Sniffer detected {$result} violation(s): " . PHP_EOL . file_get_contents($reportFile)
         );
     }
 
