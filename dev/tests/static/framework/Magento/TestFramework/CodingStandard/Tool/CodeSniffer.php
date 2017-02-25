@@ -51,7 +51,10 @@ class CodeSniffer implements ToolInterface, ExtensionInterface
      */
     public function __construct($rulesetDir, $reportFile, Wrapper $wrapper)
     {
-        $this->rulesetDir = file_exists($rulesetDir) ? $rulesetDir : realpath(__DIR__ . '/../../../../' . $rulesetDir);
+        $this->rulesetDir = $rulesetDir;
+        if (!file_exists($rulesetDir) && file_exists($fullPath = realpath(__DIR__ . '/../../../../' . $rulesetDir))) {
+            $this->rulesetDir = $fullPath;
+        }
         $this->reportFile = $reportFile;
         $this->wrapper = $wrapper;
     }
