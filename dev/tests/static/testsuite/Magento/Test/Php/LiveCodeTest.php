@@ -201,7 +201,7 @@ class LiveCodeTest extends PHPUnit_Framework_TestCase
     public function testNoViolationsDetectedByPhpCodeSniffer()
     {
         $reportFile = self::$reportDir . '/phpcs_report.txt';
-        $codeSniffer = new CodeSniffer('Magento', $reportFile, new Wrapper());
+        $codeSniffer = new CodeSniffer('PSR2', $reportFile, new Wrapper()); //TODO: back to Magento standard
         $this->assertEquals(
             0,
             $result = $codeSniffer->run($this->getFullWhitelist()),
