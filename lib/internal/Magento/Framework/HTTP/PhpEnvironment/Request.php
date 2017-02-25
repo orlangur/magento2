@@ -415,7 +415,7 @@ class Request extends \Zend\Http\PhpEnvironment\Request
             return true;
         }
       
-        return $this->initialRequestSecure($this->SslOffloadHeader());
+        return $this->initialRequestSecure($this->getSslOffloadHeader());
     }
 
     /***
@@ -423,7 +423,7 @@ class Request extends \Zend\Http\PhpEnvironment\Request
      *
      * @return string
      */
-    private function SslOffloadHeader()
+    private function getSslOffloadHeader()
     {
         // Lets read from db only one time okay.
         if ($this->sslOffloadHeader === null) {
