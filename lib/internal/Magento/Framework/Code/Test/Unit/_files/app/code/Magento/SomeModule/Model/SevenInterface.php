@@ -22,7 +22,6 @@ use Magento\SomeModule\Model\Three\Test as TestThree;
  */
 interface SevenInterface extends \Magento\Framework\Code\Generator\CodeGeneratorInterface
 {
-
     /**
      * Method short description
      *
@@ -43,6 +42,4 @@ interface SevenInterface extends \Magento\Framework\Code\Generator\CodeGenerator
     public function testMethod2($data = 'test_default', $flag = true);
 
     public function testMethod3();
-
-
 }

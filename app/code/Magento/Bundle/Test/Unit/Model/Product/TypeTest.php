@@ -1816,7 +1816,6 @@ class TypeTest extends \PHPUnit_Framework_TestCase
      * @param int $getSelectionsIdsIndex
      * @return \PHPUnit_Framework_MockObject_MockObject
      */
-
     protected function getSelectionsByIdsMock($selectionIds, $productMock, $getSelectionsIndex, $getSelectionsIdsIndex)
     {
         $usedSelectionsMock = $this->getMockBuilder(\Magento\Bundle\Model\ResourceModel\Selection\Collection::class)

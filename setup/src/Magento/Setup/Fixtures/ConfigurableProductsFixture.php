@@ -33,6 +33,7 @@ class ConfigurableProductsFixture extends SimpleProductsFixture
     protected $variationsCount;
 
     //@codingStandardsIgnoreStart
+
     /**
      * Get CSV template headers
      * @SuppressWarnings(PHPMD)
@@ -590,6 +591,7 @@ class ConfigurableProductsFixture extends SimpleProductsFixture
             }
         }
     }
+
     // @codingStandardsIgnoreEnd
 
     /**
