@@ -52,7 +52,6 @@ class SerializedDataConverterTest extends \PHPUnit_Framework_TestCase
             );
 
         $this->model = new \Magento\Sales\Setup\SerializedDataConverter($this->serializeMock, $this->jsonMock);
-
     }
 
     /**

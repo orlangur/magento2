@@ -52,6 +52,5 @@ class ReportProvider
         $connection = $this->connectionFactory->getConnection($query->getConnectionName());
         $statement = $connection->query($query->getSelect());
         return new \IteratorIterator($statement);
-
     }
 }
