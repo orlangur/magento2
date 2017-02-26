@@ -33,4 +33,4 @@ install: composer install --no-interaction --prefer-dist
 before_script: ./dev/travis/before_script.sh
 script:
   - test $TEST_SUITE = "static" && TEST_FILTER='--filter "Magento\\Test\\Php\\LiveCodeTest"' || true
-  - phpunit -c dev/tests/$TEST_SUITE $TEST_FILTER --debug --stop-on-failure
+  - phpunit -c dev/tests/$TEST_SUITE $TEST_FILTER
