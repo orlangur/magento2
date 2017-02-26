@@ -418,7 +418,7 @@ class Request extends \Zend\Http\PhpEnvironment\Request
         return $this->initialRequestSecure($this->getSslOffloadHeader());
     }
 
-    /***
+    /**
      * Get value of SSL offload http header from configuration - defaults to X-Forwarded-Proto
      *
      * @return string

@@ -15,7 +15,6 @@ use Magento\TestFramework\Dependency\VirtualType\VirtualTypeMapper;
 class DiRule implements RuleInterface
 {
     /**
-
      * @var VirtualTypeMapper
      */
     private $mapper;

@@ -47,13 +47,13 @@ class CollectTotalsObserver implements ObserverInterface
     protected $groupManagement;
 
     /**
-     * Initialize dependencies.
-     *
      * @param \Magento\Customer\Helper\Address $customerAddressHelper
      * @param \Magento\Customer\Model\Vat $customerVat
      * @param VatValidator $vatValidator
      * @param \Magento\Customer\Api\Data\CustomerInterfaceFactory $customerDataFactory
      * @param \Magento\Customer\Api\GroupManagementInterface $groupManagement
+     * @param \Magento\Customer\Api\AddressRepositoryInterface $addressRepository
+     * @param \Magento\Customer\Model\Session $customerSession
      */
     public function __construct(
         \Magento\Customer\Helper\Address $customerAddressHelper,
