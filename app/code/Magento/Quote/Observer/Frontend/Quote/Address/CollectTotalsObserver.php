@@ -78,6 +78,7 @@ class CollectTotalsObserver implements ObserverInterface
      *
      * @param \Magento\Framework\Event\Observer $observer
      * @return void
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      */
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
