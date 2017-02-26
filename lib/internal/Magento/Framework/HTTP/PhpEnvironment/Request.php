@@ -13,6 +13,9 @@ use Zend\Stdlib\ParametersInterface;
 use Zend\Uri\UriFactory;
 use Zend\Uri\UriInterface;
 
+/**
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ */
 class Request extends \Zend\Http\PhpEnvironment\Request
 {
     /**#@+
@@ -418,7 +421,7 @@ class Request extends \Zend\Http\PhpEnvironment\Request
         return $this->initialRequestSecure($this->getSslOffloadHeader());
     }
 
-    /***
+    /**
      * Get value of SSL offload http header from configuration - defaults to X-Forwarded-Proto
      *
      * @return string
