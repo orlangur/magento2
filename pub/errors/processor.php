@@ -9,6 +9,7 @@ use Magento\Framework\Filesystem\DriverInterface;
 
 /**
  * Error processor
+ * @SuppressWarnings(PHPMD.TooManyFields)
  */
 class Processor
 {
@@ -311,6 +312,8 @@ class Processor
      * Prepare config data
      *
      * @return void
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     protected function _prepareConfig()
     {
@@ -446,6 +449,7 @@ class Processor
      *
      * @param array $reportData
      * @return void
+     * @SuppressWarnings(PHPMD.ExitExpression)
      */
     public function saveReport($reportData)
     {
@@ -478,6 +482,7 @@ class Processor
      *
      * @param int $reportId
      * @return void
+     * @SuppressWarnings(PHPMD.ExitExpression)
      */
     public function loadReport($reportId)
     {
@@ -495,6 +500,8 @@ class Processor
      * Send report
      *
      * @return void
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
      */
     public function sendReport()
     {

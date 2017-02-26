@@ -13,6 +13,9 @@ use Zend\Stdlib\ParametersInterface;
 use Zend\Uri\UriFactory;
 use Zend\Uri\UriInterface;
 
+/**
+ * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
+ */
 class Request extends \Zend\Http\PhpEnvironment\Request
 {
     /**#@+

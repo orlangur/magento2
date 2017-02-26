@@ -69,6 +69,7 @@ class DiRule implements RuleInterface
      * @param string $contents
      * @return array
      * @throws \Exception
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function getDependencyInfo($currentModule, $fileType, $file, &$contents)
     {

@@ -80,6 +80,7 @@ class DateRangeTest extends \PHPUnit_Framework_TestCase
      * @param array|null $expectedCondition
      * @dataProvider getPrepareDataProvider
      * @return void
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      */
     public function testPrepare($name, $filterData, $expectedCondition)
     {
