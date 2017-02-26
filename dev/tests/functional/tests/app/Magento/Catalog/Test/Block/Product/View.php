@@ -364,7 +364,7 @@ class View extends AbstractConfigureBlock
 
     /**
      * Press 'Check out with Braintree PayPal' button.
-     * 
+     *
      * @return string
      */
     public function braintreePaypalCheckout()

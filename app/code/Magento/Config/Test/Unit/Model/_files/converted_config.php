@@ -163,7 +163,7 @@ return [
                                     'type' => 'text',
                                     'label' => '',
                                     '_elementType' => 'field',
-                                ],
+                                 ],
                             ],
                             '_elementType' => 'group',
                         ],

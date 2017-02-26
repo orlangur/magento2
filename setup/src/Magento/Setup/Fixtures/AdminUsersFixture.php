@@ -57,7 +57,6 @@ class AdminUsersFixture extends Fixture
                 ->setParentId(1);
             $role->save();
         }
-
     }
 
     /**

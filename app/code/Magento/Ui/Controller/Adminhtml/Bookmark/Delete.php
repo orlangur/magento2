@@ -59,6 +59,5 @@ class Delete extends AbstractAction
         if ($bookmark && $bookmark->getId()) {
             $this->bookmarkRepository->delete($bookmark);
         }
-
     }
 }
