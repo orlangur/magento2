@@ -94,6 +94,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
         }
 
         if (version_compare($context->getVersion(), '2.0.3') < 0) {
+
             // Drop and recreate 'search_synonyms' table
             $connection->dropTable($installer->getTable('search_synonyms'));
 

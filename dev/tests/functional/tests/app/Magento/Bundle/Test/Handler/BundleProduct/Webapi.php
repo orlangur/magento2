@@ -135,6 +135,7 @@ class Webapi extends SimpleProductWebapi implements BundleProductInterface
                     'selection_id' => (int)$optionValue['id'],
                     'option_id' => $option['option_id']
                 ];
+
             }
         }
 

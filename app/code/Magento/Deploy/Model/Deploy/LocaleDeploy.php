@@ -333,6 +333,7 @@ class LocaleDeploy implements DeployInterface
     private function deployLibFiles($area, $themePath, $locale)
     {
         foreach ($this->filesUtil->getStaticLibraryFiles() as $filePath) {
+
             if ($this->checkSkip($filePath)) {
                 continue;
             }

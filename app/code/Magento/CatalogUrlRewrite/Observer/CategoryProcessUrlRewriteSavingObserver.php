@@ -93,5 +93,6 @@ class CategoryProcessUrlRewriteSavingObserver implements ObserverInterface
         foreach ($this->dataUrlRewriteClassNames as $className) {
             $this->databaseMapPool->resetMap($className, $category->getEntityId());
         }
+
     }
 }

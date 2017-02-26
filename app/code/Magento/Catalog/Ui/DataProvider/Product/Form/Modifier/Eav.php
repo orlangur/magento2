@@ -798,7 +798,8 @@ class Eav extends AbstractModifier
      */
     private function getScopeLabel(ProductAttributeInterface $attribute)
     {
-        if ($this->storeManager->isSingleStoreMode()
+        if (
+            $this->storeManager->isSingleStoreMode()
             || $attribute->getFrontendInput() === AttributeInterface::FRONTEND_INPUT
         ) {
             return '';

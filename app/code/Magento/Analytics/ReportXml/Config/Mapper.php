@@ -31,6 +31,7 @@ class Mapper
             $entityData = array_shift($queryData['source']);
             $queries[$queryData['name']] = $queryData;
             $queries[$queryData['name']]['source'] = $entityData;
+
         }
         return $queries;
     }

@@ -81,7 +81,8 @@ class Reader
             $files[$fileKey] = $filePath;
             if (!$fileDriver->isExists($path . "/" . $filePath)) {
                 foreach ($initialFilePools as $initialFiles) {
-                    if (isset($initialFiles[$fileKey])
+                    if (
+                        isset($initialFiles[$fileKey])
                         && $fileDriver->isExists($path . '/' . $initialFiles[$fileKey])
                     ) {
                         $files[$fileKey] = $initialFiles[$fileKey];

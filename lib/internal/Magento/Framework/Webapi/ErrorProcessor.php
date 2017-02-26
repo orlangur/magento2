@@ -165,7 +165,8 @@ class ErrorProcessor
      */
     public function renderException(\Exception $exception, $httpCode = self::DEFAULT_ERROR_HTTP_CODE)
     {
-        if ($this->_appState->getMode() == State::MODE_DEVELOPER ||
+        if (
+            $this->_appState->getMode() == State::MODE_DEVELOPER ||
             $exception instanceof \Magento\Framework\Webapi\Exception
         ) {
             $this->renderErrorMessage($exception->getMessage(), $exception->getTraceAsString(), $httpCode);

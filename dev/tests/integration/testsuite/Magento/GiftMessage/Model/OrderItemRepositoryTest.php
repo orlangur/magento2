@@ -28,6 +28,7 @@ class OrderItemRepositoryTest extends \PHPUnit_Framework_TestCase
         $this->giftMessageOrderItemRepository = $this->objectManager->create(
             \Magento\GiftMessage\Model\OrderItemRepository::class
         );
+
     }
 
     protected function tearDown()

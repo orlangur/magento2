@@ -169,6 +169,7 @@ class Kernel
             'headers' => $response->getHeaders()->toArray(),
             'context' => $this->context->toArray()
         ];
+
     }
 
     /**

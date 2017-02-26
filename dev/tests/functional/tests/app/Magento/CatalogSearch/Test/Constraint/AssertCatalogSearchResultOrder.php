@@ -43,6 +43,7 @@ class AssertCatalogSearchResultOrder extends AbstractConstraint
             $productNamesOnPage = $resultPage->getListProductBlock()->getProductNames();
 
             foreach ($productNamesOnPage as $productOnPage) {
+
                 $idxInArray = array_search($productOnPage, $productsOrder, true);
                 if (false !== $idxInArray) {
                     if (0 !== $idxInArray) {

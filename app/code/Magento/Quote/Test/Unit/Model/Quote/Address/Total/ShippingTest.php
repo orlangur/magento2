@@ -270,5 +270,6 @@ class ShippingTest extends \PHPUnit_Framework_TestCase
         $this->cartItem->expects($this->atLeastOnce())
             ->method('getFreeShipping')
             ->willReturn(true);
+
     }
 }

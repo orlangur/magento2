@@ -31,6 +31,7 @@ class DateTimeFormatterTest extends \PHPUnit_Framework_TestCase
         $this->localeResolverMock->expects($this->any())
             ->method('getLocale')
             ->willReturn('fr-FR');
+
     }
 
     /**

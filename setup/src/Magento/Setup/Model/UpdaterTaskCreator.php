@@ -159,6 +159,7 @@ class UpdaterTaskCreator
                 [],
                 \Magento\Setup\Model\Cron\JobFactory::JOB_MAINTENANCE_MODE_DISABLE
             );
+
         }
 
         return $errorMessage;
@@ -176,7 +177,7 @@ class UpdaterTaskCreator
     private function getCronTaskConfigInfo($jobType, $postPayload, &$additionalOptions, &$cronTaskType)
     {
         $additionalOptions = [];
-        switch ($jobType) {
+        switch($jobType) {
             case 'uninstall':
                 $additionalOptions = [
                     JobComponentUninstall::DATA_OPTION => $postPayload[self::KEY_POST_DATA_OPTION]

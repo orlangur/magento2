@@ -521,6 +521,7 @@ class Calculation extends \Magento\Framework\Model\AbstractModel
         ) {
             $basedOn = 'default';
         } else {
+
             if (($billingAddress === null || !$billingAddress->getCountryId())
                 && $basedOn == 'billing'
                 || ($shippingAddress === null || !$shippingAddress->getCountryId())

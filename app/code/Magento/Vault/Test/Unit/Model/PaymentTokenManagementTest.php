@@ -508,6 +508,7 @@ class PaymentTokenManagementTest extends \PHPUnit_Framework_TestCase
             [$token],
             $this->paymentTokenManagement->getVisibleAvailableTokens($customerId)
         );
+
     }
 
     /**

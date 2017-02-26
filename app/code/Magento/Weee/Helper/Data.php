@@ -830,7 +830,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
                         if ($priceIncludesTax == false) {
                             $weeeAttribute['amount'] = $weeeAttribute['amount_excl_tax'] + $weeeAttribute['tax_amount'];
                         }
-                    } elseif ($priceTaxDisplay == \Magento\Tax\Model\Config::DISPLAY_TYPE_EXCLUDING_TAX) {
+                    } else if ($priceTaxDisplay == \Magento\Tax\Model\Config::DISPLAY_TYPE_EXCLUDING_TAX) {
                         if ($priceIncludesTax == true) {
                             $weeeAttribute['amount'] = $weeeAttribute['amount_excl_tax'];
                         }

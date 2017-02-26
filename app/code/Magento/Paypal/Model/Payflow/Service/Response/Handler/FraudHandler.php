@@ -56,7 +56,8 @@ class FraudHandler implements HandlerInterface
      */
     public function handle(InfoInterface $payment, DataObject $response)
     {
-        if (!in_array(
+        if (
+        !in_array(
             $response->getData('result'),
             [
                 Payflowpro::RESPONSE_CODE_DECLINED_BY_FILTER,
@@ -107,6 +108,7 @@ class FraudHandler implements HandlerInterface
                 $rules[(string)$rule->{'ruleDescription'}] = (string)$rule->{'triggeredMessage'};
             }
         } catch (\Exception $e) {
+
         } finally {
             libxml_use_internal_errors(false);
         }

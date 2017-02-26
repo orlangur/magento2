@@ -79,5 +79,6 @@ class InstallData implements InstallDataInterface
          * Prepare database after install
          */
         $setup->endSetup();
+
     }
 }

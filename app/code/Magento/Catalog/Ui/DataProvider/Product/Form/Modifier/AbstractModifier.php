@@ -106,7 +106,8 @@ abstract class AbstractModifier implements ModifierInterface
                         $defaultSortOrder,
                         $iteration
                     );
-                } elseif (in_array($attributeCode, $attributeCodes)
+                } elseif (
+                    in_array($attributeCode, $attributeCodes)
                     && isset($attributeMeta['arguments']['data']['config']['sortOrder'])
                 ) {
                     $defaultSortOrder = $attributeMeta['arguments']['data']['config']['sortOrder'] + $iteration;
@@ -160,7 +161,8 @@ abstract class AbstractModifier implements ModifierInterface
         $name = null;
 
         foreach ($meta as $fieldSetName => $fieldSetMeta) {
-            if (isset($fieldSetMeta['arguments']['data']['config']['sortOrder'])
+            if (
+                isset($fieldSetMeta['arguments']['data']['config']['sortOrder'])
                 && (null === $min || $fieldSetMeta['arguments']['data']['config']['sortOrder'] <= $min)
             ) {
                 $min = $fieldSetMeta['arguments']['data']['config']['sortOrder'];
@@ -181,7 +183,8 @@ abstract class AbstractModifier implements ModifierInterface
     protected function getGroupCodeByField(array $meta, $field)
     {
         foreach ($meta as $groupCode => $groupData) {
-            if (isset($groupData['children'][$field])
+            if (
+                isset($groupData['children'][$field])
                 || isset($groupData['children'][static::CONTAINER_PREFIX . $field])
             ) {
                 return $groupCode;

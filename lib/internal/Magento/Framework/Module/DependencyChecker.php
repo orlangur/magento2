@@ -106,7 +106,7 @@ class DependencyChecker
                 if (isset($paths[$module])) {
                     if ($isEnable && !in_array($module, $enabledModules)) {
                         $dependenciesMissing[$module] = $paths[$module];
-                    } elseif (!$isEnable && in_array($module, $enabledModules)) {
+                    } else if (!$isEnable && in_array($module, $enabledModules)) {
                         $dependenciesMissing[$module] = array_reverse($paths[$module]);
                     }
                 }

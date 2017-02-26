@@ -99,7 +99,8 @@ class GetToken extends AbstractExpress
                 $quote->getBillingAddress(),
                 $quote->getShippingAddress()
             );
-        } elseif ((!$quoteCheckoutMethod || $quoteCheckoutMethod !== Onepage::METHOD_REGISTER)
+        } else if (
+            (!$quoteCheckoutMethod || $quoteCheckoutMethod !== Onepage::METHOD_REGISTER)
                 && !$checkoutHelper->isAllowedGuestCheckout($quote, $quote->getStoreId())
         ) {
             $expressRedirect = $this->_objectManager->get(ExpressRedirect::class);

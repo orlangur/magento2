@@ -219,6 +219,7 @@ class AddProductsToShoppingCartEntityTest extends Injectable
             \Magento\Config\Test\TestStep\SetupConfigurationStep::class,
             ['configData' => $this->configData, 'rollback' => true, 'flushCache' => $this->flushCache]
         )->run();
+
     }
 
     /**

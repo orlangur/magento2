@@ -186,6 +186,7 @@ class StaticProperties
                     self::$backupStaticVariables[$className][$staticProperty->getName()] = $value;
                 }
             }
+
         }
     }
 

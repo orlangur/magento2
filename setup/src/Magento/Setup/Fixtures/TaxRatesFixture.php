@@ -53,6 +53,7 @@ class TaxRatesFixture extends Fixture
         $importHandler = $this->fixtureModel->getObjectManager()
             ->create(\Magento\TaxImportExport\Model\Rate\CsvImportHandler::class);
         $importHandler->importFromCsvFile($file);
+
     }
 
     /**

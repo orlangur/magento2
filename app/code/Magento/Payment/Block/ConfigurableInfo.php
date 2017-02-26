@@ -67,6 +67,7 @@ class ConfigurableInfo extends \Magento\Payment\Block\Info
                     $field,
                     $payment->getAdditionalInformation($field)
                 );
+
             }
         }
 

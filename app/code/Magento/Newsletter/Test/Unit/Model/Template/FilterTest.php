@@ -76,6 +76,7 @@ class FilterTest extends \PHPUnit_Framework_TestCase
             $widgetResource,
             $widget
         );
+
     }
 
     public function testWidgetDirective()

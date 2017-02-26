@@ -65,6 +65,7 @@ class InvalidateVarnishObserver implements ObserverInterface
             if (!empty($tags)) {
                 $this->purgeCache->sendPurgeRequest(implode('|', array_unique($tags)));
             }
+
         }
     }
 

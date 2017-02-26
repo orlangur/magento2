@@ -422,6 +422,7 @@ class DataProvider
             $attributeCode = $attribute->getAttributeCode();
 
             if (isset($productData[$attributeCode])) {
+
                 if ('store_id' === $attributeCode) {
                     continue;
                 }

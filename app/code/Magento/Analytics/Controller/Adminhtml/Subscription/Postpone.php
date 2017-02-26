@@ -55,6 +55,7 @@ class Postpone extends Action
         $this->notificationTime = $notificationTime;
         $this->logger = $logger;
         parent::__construct($context);
+
     }
 
     /**

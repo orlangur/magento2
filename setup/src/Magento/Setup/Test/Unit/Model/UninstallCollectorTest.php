@@ -72,6 +72,7 @@ class UninstallCollectorTest extends \PHPUnit_Framework_TestCase
             ['Magento_A' => 'Uninstall Class A', 'Magento_B' => 'Uninstall Class B'],
             $this->collector->collectUninstall()
         );
+
     }
 
     public function testUninstallCollectorWithInput()

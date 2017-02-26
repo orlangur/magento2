@@ -364,6 +364,7 @@ class Save extends \Magento\Catalog\Controller\Adminhtml\Category
         } else {
             $path = 'catalog/*/edit';
             $params['id'] = $categoryId;
+
         }
         return ['path' => $path, 'params' => $params];
     }

@@ -104,6 +104,7 @@ class CustomOptionProcessorTest extends \PHPUnit_Framework_TestCase
             $this->customOptionFactory,
             $this->serializer
         );
+
     }
 
     public function testConvertToBuyRequest()

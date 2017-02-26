@@ -279,7 +279,8 @@ class Generator extends AbstractSchemaGenerator
 
         $phpMethodData = $httpMethodData[Converter::KEY_METHOD];
         /** Return nothing if necessary fields are not set */
-        if (!isset($phpMethodData['interface']['in']['parameters'])
+        if (
+            !isset($phpMethodData['interface']['in']['parameters'])
             || !isset($httpMethodData['uri'])
             || !isset($httpMethodData['httpOperation'])
         ) {
@@ -288,7 +289,8 @@ class Generator extends AbstractSchemaGenerator
 
         foreach ($phpMethodData['interface']['in']['parameters'] as $parameterName => $parameterInfo) {
             /** Omit forced parameters */
-            if (isset($httpMethodData['parameters'][$parameterName]['force'])
+            if (
+                isset($httpMethodData['parameters'][$parameterName]['force'])
                 && $httpMethodData['parameters'][$parameterName]['force']
             ) {
                 continue;
@@ -316,6 +318,7 @@ class Generator extends AbstractSchemaGenerator
                     $description,
                     $bodySchema
                 );
+
             }
         }
 

@@ -512,6 +512,7 @@ class Layout extends \Magento\Framework\Simplexml\Config implements \Magento\Fra
         $display = $this->structure->getAttribute($name, 'display');
         if ($display === '' || $display === false || $display === null
             || filter_var($display, FILTER_VALIDATE_BOOLEAN)) {
+
             return true;
         }
         return false;

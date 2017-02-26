@@ -60,6 +60,7 @@ class UploadJsTest extends \Magento\Theme\Test\Unit\Controller\Adminhtml\System\
             '',
             false
         );
+
     }
 
     public function testExecuteWithoutTheme()

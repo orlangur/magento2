@@ -385,6 +385,7 @@ class AttributeMerger
             } else {
                 array_push($tailOptions, $countryOption);
             }
+
         }
         return array_merge($headOptions, $tailOptions);
     }

@@ -378,6 +378,7 @@ class UpgradeData implements UpgradeDataInterface
                 'is_global',
                 \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL
             );
+
         }
     }
 }

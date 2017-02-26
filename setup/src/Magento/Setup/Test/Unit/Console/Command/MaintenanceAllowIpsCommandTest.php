@@ -64,6 +64,7 @@ class MaintenanceAllowIpsCommandTest extends \PHPUnit_Framework_TestCase
         $tester = new CommandTester($this->command);
         $tester->execute($input);
         $this->assertEquals($expectedMessage, $tester->getDisplay());
+
     }
 
     /**

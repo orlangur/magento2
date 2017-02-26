@@ -123,7 +123,7 @@ class ContextPlugin
         if (!$countryId && !$regionId) {
             // country and region does not exist
             return;
-        } elseif ($countryId && !$regionId) {
+        } else if ($countryId && !$regionId) {
             // country exist and region does not exist
             $regionId = 0;
             $exist = $this->weeeTax->isWeeeInLocation(
@@ -186,7 +186,8 @@ class ContextPlugin
                 $countryId = $defaultShippingAddress['country_id'];
                 $regionId = $defaultShippingAddress['region_id'];
             }
-        } elseif ($basedOn == 'billing') {
+
+        } else if ($basedOn == 'billing') {
             $defaultBillingAddress = $this->customerSession->getDefaultTaxBillingAddress();
             if (empty($defaultBillingAddress)) {
                 $countryId = $defaultCountryId;

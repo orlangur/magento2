@@ -90,3 +90,4 @@ class DefaultItemTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('canApplyMsrp', $itemData);
     }
 }
+

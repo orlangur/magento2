@@ -372,6 +372,7 @@ class EavAttribute
         if ($this->isSwatchExists) {
             $swatch->setData('type', $type);
             $swatch->setData('value', $value);
+
         } else {
             $swatch->setData('option_id', $optionId);
             $swatch->setData('store_id', $storeId);
@@ -397,7 +398,8 @@ class EavAttribute
             /** @var \Magento\Swatches\Model\Swatch $swatch */
             $swatch = $this->swatchFactory->create();
             // created and removed on frontend option not exists in dependency array
-            if (substr($defaultValue, 0, 6) == self::BASE_OPTION_TITLE &&
+            if (
+                substr($defaultValue, 0, 6) == self::BASE_OPTION_TITLE &&
                 isset($this->dependencyArray[$defaultValue])
             ) {
                 $defaultValue = $this->dependencyArray[$defaultValue];

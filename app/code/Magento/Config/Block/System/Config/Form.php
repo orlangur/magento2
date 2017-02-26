@@ -436,6 +436,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                         ->afterLoad();
                     $data = $backendModel->getValue();
                 }
+
             } elseif ($field->getConfigPath() !== null) {
                 $data = $this->getConfigValue($field->getConfigPath());
             } else {

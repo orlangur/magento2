@@ -99,6 +99,7 @@ class CreditmemoDocumentFactory
             ->setIsCustomerNotified($appendComment);
         $creditmemo->setComments([$comment]);
         return $creditmemo;
+
     }
 
     /**

@@ -81,7 +81,8 @@ class QuantityValidator implements ValidatorInterface
             }
             $orderItem = $orderItemsById[$item->getOrderItemId()];
 
-            if (!$this->canRefundItem($orderItem, $item->getQty(), $invoiceQtysRefundLimits) ||
+            if (
+                !$this->canRefundItem($orderItem, $item->getQty(), $invoiceQtysRefundLimits) ||
                 !$this->isQtyAvailable($orderItem, $item->getQty())
             ) {
                 $messages[] =__(
@@ -128,7 +129,8 @@ class QuantityValidator implements ValidatorInterface
             $invoiceQtysRefunded = [];
             $invoice = $this->invoiceRepository->get($creditmemo->getInvoiceId());
             foreach ($order->getCreditmemosCollection() as $createdCreditmemo) {
-                if ($createdCreditmemo->getState() != Creditmemo::STATE_CANCELED &&
+                if (
+                    $createdCreditmemo->getState() != Creditmemo::STATE_CANCELED &&
                     $createdCreditmemo->getInvoiceId() == $invoice->getId()
                 ) {
                     foreach ($createdCreditmemo->getAllItems() as $createdCreditmemoItem) {

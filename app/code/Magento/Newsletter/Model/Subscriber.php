@@ -550,7 +550,7 @@ class Subscriber extends \Magento\Framework\Model\AbstractModel
                 == $this->customerAccountManagement->getConfirmationStatus($customerId)
             ) {
                 $status = self::STATUS_UNCONFIRMED;
-            } elseif ($isConfirmNeed) {
+            } else if ($isConfirmNeed) {
                 $status = self::STATUS_NOT_ACTIVE;
             }
         } else {
@@ -588,7 +588,7 @@ class Subscriber extends \Magento\Framework\Model\AbstractModel
             try {
                 if ($isConfirmNeed) {
                     $this->sendConfirmationRequestEmail();
-                } elseif ($this->isStatusChanged() && $status == self::STATUS_UNSUBSCRIBED) {
+                } else if ($this->isStatusChanged() && $status == self::STATUS_UNSUBSCRIBED) {
                     $this->sendUnsubscriptionEmail();
                 } elseif ($this->isStatusChanged() && $status == self::STATUS_SUBSCRIBED) {
                     $this->sendConfirmationSuccessEmail();

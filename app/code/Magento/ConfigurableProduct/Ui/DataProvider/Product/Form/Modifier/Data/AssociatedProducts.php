@@ -359,6 +359,7 @@ class AssociatedProducts
         asort($result);
 
         return implode('-', $result);
+
     }
 
     /**

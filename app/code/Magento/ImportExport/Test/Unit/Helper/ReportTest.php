@@ -91,6 +91,7 @@ class ReportTest extends \PHPUnit_Framework_TestCase
                 'filesystem' =>$this->filesystem
             ]
         );
+
     }
 
     /**

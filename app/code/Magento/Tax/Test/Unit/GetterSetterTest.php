@@ -34,7 +34,7 @@ class GetterSetterTest extends \PHPUnit_Framework_TestCase
                     $variableValue = [$obj];
                     $variables[$variableName] = $variableValue;
                 }
-            } elseif (strpos($variableValue, 'Magento') !== false) {
+            } else if (strpos($variableValue, 'Magento') !== false) {
                 $obj = $objectManager->getObject($variableValue);
                 $variableValue = $obj;
                 $variables[$variableName] = $variableValue;

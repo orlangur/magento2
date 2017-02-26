@@ -38,7 +38,7 @@ class CustomerNotification
 
     /**
      * CustomerNotification constructor.
-     *
+     * 
      * @param Session $session
      * @param NotificationStorage $notificationStorage
      * @param State $state

@@ -151,7 +151,8 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
         $elements = $this->convertElementsToSelect($elements, $attributesToConvert);
         // The following code is a workaround for custom address attributes
         if (isset($jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']
-            ['payment']['children'])) {
+            ['payment']['children']
+        )) {
             $jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']
             ['payment']['children'] = $this->processPaymentChildrenComponents(
                 $jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']
@@ -160,7 +161,8 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
             );
         }
         if (isset($jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']
-            ['step-config']['children']['shipping-rates-validation']['children'])) {
+            ['step-config']['children']['shipping-rates-validation']['children']
+        )) {
             $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']
             ['step-config']['children']['shipping-rates-validation']['children'] =
                 $this->processShippingChildrenComponents(
@@ -170,7 +172,8 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
         }
 
         if (isset($jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']
-            ['children']['shippingAddress']['children']['shipping-address-fieldset']['children'])) {
+            ['children']['shippingAddress']['children']['shipping-address-fieldset']['children']
+        )) {
             $fields = $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']
             ['children']['shippingAddress']['children']['shipping-address-fieldset']['children'];
             $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']

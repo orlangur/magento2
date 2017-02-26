@@ -26,6 +26,7 @@ class SchemaLocatorTest extends \PHPUnit_Framework_TestCase
         $property = new \ReflectionProperty($this->model, 'urnResolver');
         $property->setAccessible(true);
         $property->setValue($this->model, $this->urnResolverMock);
+
     }
 
     public function testGetSchema()

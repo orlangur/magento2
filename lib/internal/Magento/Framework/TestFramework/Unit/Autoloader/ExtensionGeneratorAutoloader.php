@@ -57,7 +57,7 @@ class ExtensionGeneratorAutoloader
                 if ($this->isExtension($className)) {
                     $content = "namespace $namespace;\n\nclass $justTypeName implements "
                         . "{$justTypeName}Interface\n{\n\n}";
-                } elseif ($this->isExtensionInterface($className)) {
+                } else if ($this->isExtensionInterface($className)) {
                     $content = "namespace $namespace;\n\ninterface $justTypeName extends "
                         . "\\Magento\\Framework\\Api\\ExtensionAttributesInterface \n{\n\n}";
                 }

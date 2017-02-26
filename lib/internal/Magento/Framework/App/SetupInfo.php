@@ -111,7 +111,7 @@ class SetupInfo
         $isProjectInDocRoot = false !== strpos($this->projectRoot . '/', $this->docRoot . '/');
         if (empty($this->server['HTTP_HOST'])) {
             return '';
-        } elseif (!$isProjectInDocRoot) {
+        } else if (!$isProjectInDocRoot) {
             return 'http://' . $this->server['HTTP_HOST'] . '/';
         }
         return 'http://' . $this->server['HTTP_HOST'] . substr($this->projectRoot . '/', strlen($this->docRoot));

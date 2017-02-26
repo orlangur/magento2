@@ -83,7 +83,7 @@ class PhpScanner implements ScannerInterface
         ) {
             /** Process special cases for extension class and extension interface */
             return $sourceClassName . 'Interface';
-        } elseif ($entityType == FactoryGenerator::ENTITY_TYPE) {
+        } else if ($entityType == FactoryGenerator::ENTITY_TYPE) {
             $extensionAttributesSuffix = ucfirst(ExtensionAttributesGenerator::ENTITY_TYPE);
             if (substr($sourceClassName, -strlen($extensionAttributesSuffix)) == $extensionAttributesSuffix) {
                 /** Process special case for extension factories */

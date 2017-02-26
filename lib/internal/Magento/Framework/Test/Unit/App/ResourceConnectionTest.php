@@ -92,5 +92,6 @@ class ResourceConnectionTest extends \PHPUnit_Framework_TestCase
         $this->configMock->expects(self::once())->method('getConnectionName')->with('default');
 
         $this->unit->closeConnection('default');
+
     }
 }

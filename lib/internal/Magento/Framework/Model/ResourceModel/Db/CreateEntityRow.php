@@ -36,6 +36,7 @@ class CreateEntityRow
     {
         $output = [];
         foreach ($metadata->getEntityConnection()->describeTable($metadata->getEntityTable()) as $column) {
+
             if ($column['DEFAULT'] == 'CURRENT_TIMESTAMP' /*|| $column['IDENTITY']*/) {
                 continue;
             }

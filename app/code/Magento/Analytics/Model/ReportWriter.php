@@ -84,6 +84,7 @@ class ReportWriter implements ReportWriterInterface
                 if (!$headers) {
                     $headers = array_keys($row);
                     $stream->writeCsv($headers);
+
                 }
                 $stream->writeCsv($row);
             }

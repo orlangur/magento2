@@ -82,7 +82,8 @@ class Validator
         }
 
         foreach ($data as $param => $value) {
-            if ($data[$param] !== null
+            if (
+                $data[$param] !== null
             && isset(
                 $this->_validators[$param]
             ) && !$this->_validators[$param]->isValid(

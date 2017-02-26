@@ -72,5 +72,6 @@ class InstallData implements InstallDataInterface
                 $installer->getConnection()->insertMultiple($installer->getTable('rating_option'), $optionData);
             }
         }
+        
     }
 }

@@ -81,6 +81,7 @@ class VariableTest extends \PHPUnit_Framework_TestCase
     {
         $this->model->setCode($code)->setName($name);
         $this->assertEquals($this->validationFailedPhrase, $this->model->validate());
+
     }
 
     /**

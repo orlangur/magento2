@@ -61,6 +61,7 @@ class ColumnsResolver
             if (isset($attributeData['group'])) {
                 $group[$columnAlias] = $expression;
             }
+
         }
         $selectBuilder->setGroup(array_merge($selectBuilder->getGroup(), $group));
         return $columns;

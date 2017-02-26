@@ -190,7 +190,8 @@ class AfterAddressSaveObserver implements ObserverInterface
             return true;
         }
 
-        if ($this->_coreRegistry->registry(BeforeAddressSaveObserver::VIV_CURRENTLY_SAVED_ADDRESS) != $address->getId()
+        if (
+            $this->_coreRegistry->registry(BeforeAddressSaveObserver::VIV_CURRENTLY_SAVED_ADDRESS) != $address->getId()
         ) {
             return false;
         }

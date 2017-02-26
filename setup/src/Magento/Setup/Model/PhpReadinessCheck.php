@@ -194,7 +194,8 @@ class PhpReadinessCheck
 
         $currentMemoryInteger = intval($currentMemoryLimit);
 
-        if ($currentMemoryInteger > 0
+        if (
+            $currentMemoryInteger > 0
             && $this->dataSize->convertSizeToBytes($currentMemoryLimit)
             < $this->dataSize->convertSizeToBytes($minimumRequiredMemoryLimit)
         ) {
@@ -208,7 +209,8 @@ class PhpReadinessCheck
                 $currentMemoryLimit,
                 $minimumRequiredMemoryLimit
             );
-        } elseif ($currentMemoryInteger > 0
+        } elseif (
+            $currentMemoryInteger > 0
             && $this->dataSize->convertSizeToBytes($currentMemoryLimit)
             < $this->dataSize->convertSizeToBytes($recommendedForUpgradeMemoryLimit)
         ) {
@@ -244,6 +246,7 @@ class PhpReadinessCheck
 
         $currentExtensions = $this->phpInformation->getCurrent();
         if (in_array('xdebug', $currentExtensions)) {
+
             $currentXDebugNestingLevel = intval(ini_get('xdebug.max_nesting_level'));
             $minimumRequiredXDebugNestedLevel = $this->phpInformation->getRequiredMinimumXDebugNestedLevel();
 

@@ -53,6 +53,7 @@ class AddFieldsToAttributeObserverTest extends \PHPUnit_Framework_TestCase
                 'yesNo' => $this->yesNoMock,
             ]
         );
+
     }
 
     /**

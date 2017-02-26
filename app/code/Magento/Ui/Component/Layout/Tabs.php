@@ -300,7 +300,7 @@ class Tabs extends \Magento\Framework\View\Layout\Generic implements LayoutInter
         if (isset($config['dataScope'])) {
             $dataScope = $config['dataScope'];
             unset($config['dataScope']);
-        } elseif ($name !== $parentName) {
+        } else if ($name !== $parentName) {
             $dataScope = $name;
         }
 

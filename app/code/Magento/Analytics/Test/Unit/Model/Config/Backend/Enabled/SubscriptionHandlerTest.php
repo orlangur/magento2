@@ -98,7 +98,7 @@ class SubscriptionHandlerTest extends \PHPUnit_Framework_TestCase
     /**
      * @param int|null $value null means that $value was not changed
      * @param bool $isTokenExist
-     *
+     * 
      * @dataProvider processDataProvider
      */
     public function testProcess($value, $isTokenExist)

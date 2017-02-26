@@ -205,6 +205,7 @@ class Read implements ReadInterface
     {
         $absolutePath = $this->driver->getAbsolutePath($this->path, $path);
         return $this->driver->fileGetContents($absolutePath, $flag, $context);
+
     }
 
     /**

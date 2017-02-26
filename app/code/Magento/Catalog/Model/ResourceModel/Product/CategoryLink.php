@@ -30,7 +30,8 @@ class CategoryLink
      * @param \Magento\Framework\EntityManager\MetadataPool $metadataPool
      * @param ResourceConnection $resourceConnection
      */
-    public function __construct(
+    public function __construct
+    (
         \Magento\Framework\EntityManager\MetadataPool $metadataPool,
         ResourceConnection $resourceConnection
     ) {

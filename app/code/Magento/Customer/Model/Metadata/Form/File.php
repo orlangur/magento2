@@ -127,7 +127,7 @@ class File extends AbstractData
                         $value[$fileKey] = $scopeData[$attrCode];
                     }
                 }
-            } elseif (isset($extend[0]['file']) && !empty($extend[0]['file'])) {
+            } else if (isset($extend[0]['file']) && !empty($extend[0]['file'])) {
                 /**
                  * This case is required by file uploader UI component
                  *

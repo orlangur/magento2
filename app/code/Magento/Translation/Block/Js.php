@@ -64,5 +64,6 @@ class Js extends Template
     public function getTranslationFilePath()
     {
         return $this->fileManager->getTranslationFilePath();
+
     }
 }
