@@ -6,6 +6,7 @@
 
 namespace Magento\ConfigurableProduct\Test\Unit\Model;
 
+
 class ProductVariationsBuilderTest extends \PHPUnit_Framework_TestCase
 {
     /**

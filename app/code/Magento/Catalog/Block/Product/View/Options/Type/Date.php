@@ -5,6 +5,7 @@
  */
 namespace Magento\Catalog\Block\Product\View\Options\Type;
 
+
 /**
  * Product options text type block
  *

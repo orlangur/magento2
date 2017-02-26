@@ -86,6 +86,7 @@ class WeeeConfigProvider implements ConfigProviderInterface
         return true;
     }
 
+
     /**
      * Whether to display final price that include Weee amounts
      *

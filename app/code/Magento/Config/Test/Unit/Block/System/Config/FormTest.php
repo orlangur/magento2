@@ -269,6 +269,7 @@ class FormTest extends \PHPUnit_Framework_TestCase
                 ->method('_initGroup');
         }
 
+
         $object->initForm();
         $this->assertEquals($this->_formMock, $object->getForm());
     }

@@ -28,7 +28,6 @@ class Grid extends Action
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
     }
-
     /**
      * Index action
      *

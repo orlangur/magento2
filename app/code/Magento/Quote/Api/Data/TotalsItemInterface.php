@@ -110,6 +110,7 @@ interface TotalsItemInterface extends \Magento\Framework\Api\ExtensibleDataInter
      */
     const KEY_WEEE_TAX_APPLIED_AMOUNT = 'weee_tax_applied_amount';
 
+
     /**
      * Item Weee Tax Applied Amount.
      */
@@ -421,7 +422,6 @@ interface TotalsItemInterface extends \Magento\Framework\Api\ExtensibleDataInter
      * @return $this
      */
     public function setWeeeTaxApplied($weeeTaxApplied);
-
     /**
      * Retrieve existing extension attributes object or create a new one.
      *

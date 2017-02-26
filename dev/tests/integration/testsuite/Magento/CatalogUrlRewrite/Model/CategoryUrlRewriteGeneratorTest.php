@@ -11,6 +11,7 @@ namespace Magento\CatalogUrlRewrite\Model;
 use Magento\UrlRewrite\Service\V1\Data\UrlRewrite;
 use Magento\UrlRewrite\Model\OptionProvider;
 
+
 /**
  * @magentoAppArea adminhtml
  */

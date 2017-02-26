@@ -95,7 +95,6 @@ class RowsTest extends \PHPUnit_Framework_TestCase
             'flatTableBuilder' => $this->_flatTableBuilder
         ]);
     }
-
     /**
      * @expectedException \Magento\Framework\Exception\LocalizedException
      * @expectedExceptionMessage Bad value was supplied.

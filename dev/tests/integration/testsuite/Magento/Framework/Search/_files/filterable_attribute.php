@@ -65,6 +65,7 @@ $multiselectOptions = \Magento\TestFramework\Helper\Bootstrap::getObjectManager(
 );
 $multiselectOptions->setAttributeFilter($multiselectAttribute->getId());
 
+
 /* Create simple products per each select(dropdown) option */
 foreach ($selectOptions as $option) {
     /** @var $product \Magento\Catalog\Model\Product */

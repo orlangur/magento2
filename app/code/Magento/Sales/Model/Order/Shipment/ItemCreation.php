@@ -83,6 +83,5 @@ class ItemCreation implements ShipmentItemCreationInterface
         $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
-
     //@codeCoverageIgnoreEnd
 }

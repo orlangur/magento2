@@ -176,4 +176,5 @@ class EditBillingTest extends \PHPUnit_Framework_TestCase
         $this->viewMock->expects($this->once())->method('renderLayout');
         $this->controller->execute();
     }
+
 }

@@ -5,6 +5,7 @@
  */
 namespace Magento\Paypal\Model\Payment\Method\Billing;
 
+
 use Magento\Quote\Api\Data\PaymentInterface;
 
 class AbstractAgreementTest extends \PHPUnit_Framework_TestCase

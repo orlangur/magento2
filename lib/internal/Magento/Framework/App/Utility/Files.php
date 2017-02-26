@@ -391,7 +391,6 @@ class Files
         }
         return self::$_cache[$cacheKey];
     }
-
     // @codingStandardsIgnoreEnd
 
     /**

@@ -115,6 +115,7 @@ class DataObject implements \ArrayAccess
      * @param string|int $index
      * @return mixed
      */
+
     public function getData($key = '', $index = null)
     {
         if ('' === $key) {

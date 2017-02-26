@@ -104,7 +104,6 @@ class MinifierTest extends \PHPUnit_Framework_TestCase
     }
 
     // @codingStandardsIgnoreStart
-
     /**
      * Covered method minify and test regular expressions
      * @test
@@ -198,7 +197,6 @@ TEXT;
 
         $this->object->minify($file);
     }
-
     // @codingStandardsIgnoreEnd
 
     /**

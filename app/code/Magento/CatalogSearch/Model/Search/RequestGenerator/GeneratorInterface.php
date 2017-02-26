@@ -6,6 +6,7 @@
 
 namespace Magento\CatalogSearch\Model\Search\RequestGenerator;
 
+
 use Magento\Catalog\Model\ResourceModel\Eav\Attribute;
 
 interface GeneratorInterface

@@ -428,6 +428,5 @@ class Link extends \Magento\Framework\Model\AbstractExtensibleModel implements C
     {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

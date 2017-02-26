@@ -5,6 +5,7 @@
  */
 namespace Magento\CmsUrlRewrite\Test\Unit\Model;
 
+
 class CmsPageUrlRewriteGeneratorTest extends \PHPUnit_Framework_TestCase
 {
     /**

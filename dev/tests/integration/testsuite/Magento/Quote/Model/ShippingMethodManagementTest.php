@@ -11,6 +11,7 @@ namespace Magento\Quote\Model;
  */
 class ShippingMethodManagementTest extends \PHPUnit_Framework_TestCase
 {
+
     /**
      * @magentoAppIsolation enabled
      * @magentoDbIsolation enabled

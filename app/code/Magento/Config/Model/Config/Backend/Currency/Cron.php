@@ -16,6 +16,7 @@ class Cron extends \Magento\Framework\App\Config\Value
     /** @var \Magento\Framework\App\Config\ValueFactory */
     protected $_configValueFactory;
 
+
     /**
      * @param \Magento\Framework\Model\Context $context
      * @param \Magento\Framework\Registry $registry

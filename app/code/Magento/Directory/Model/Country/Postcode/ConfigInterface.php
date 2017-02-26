@@ -7,6 +7,7 @@ namespace Magento\Directory\Model\Country\Postcode;
 
 interface ConfigInterface
 {
+
     /**
      * Returns array of postcodes validation patterns
      *

@@ -6,6 +6,7 @@
  */
 namespace Magento\Sitemap\Controller\Adminhtml\Sitemap;
 
+
 class Generate extends \Magento\Sitemap\Controller\Adminhtml\Sitemap
 {
     /**

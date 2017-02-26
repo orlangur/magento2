@@ -13,6 +13,7 @@ use Magento\Framework\Option\ArrayInterface;
  */
 class BillingAddressDisplayOptions implements ArrayInterface
 {
+
     /**
      * Return array of options for billing address displaying on checkout payment step
      *

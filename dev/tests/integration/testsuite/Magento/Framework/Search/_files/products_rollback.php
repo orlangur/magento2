@@ -17,5 +17,6 @@ if ($collection->count() > 0) {
     $collection->delete();
 }
 
+
 $registry->unregister('isSecureArea');
 $registry->register('isSecureArea', false);

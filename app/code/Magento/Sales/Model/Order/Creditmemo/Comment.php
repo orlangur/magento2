@@ -222,6 +222,5 @@ class Comment extends AbstractModel implements CreditmemoCommentInterface
     ) {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

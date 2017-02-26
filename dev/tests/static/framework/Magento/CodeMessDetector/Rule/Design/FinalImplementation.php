@@ -17,6 +17,7 @@ use PHPMD\Rule\MethodAware;
  */
 class FinalImplementation extends AbstractRule implements ClassAware, MethodAware
 {
+
     /**
      * @inheritdoc
      */

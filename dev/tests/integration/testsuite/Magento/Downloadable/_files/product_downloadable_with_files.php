@@ -112,6 +112,8 @@ if ($link->getIsUnlimited()) {
 }
 $links[] = $link;
 
+
+
 $extension->setDownloadableProductLinks($links);
 
 if (isset($downloadableData['sample']) && is_array($downloadableData['sample'])) {

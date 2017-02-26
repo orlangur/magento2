@@ -12,6 +12,7 @@ $registry = $objectManager->get(\Magento\Framework\Registry::class);
 $registry->unregister('isSecureArea');
 $registry->register('isSecureArea', true);
 
+
 $repository = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->create(
     \Magento\Catalog\Model\ProductRepository::class
 );
@@ -25,6 +26,7 @@ try {
 /** @var $category \Magento\Catalog\Model\Category */
 $category = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->create(\Magento\Catalog\Model\Category::class);
 $category->load(9)->delete();
+
 
 $registry->unregister('isSecureArea');
 $registry->register('isSecureArea', false);

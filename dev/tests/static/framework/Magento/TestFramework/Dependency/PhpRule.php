@@ -203,6 +203,7 @@ class PhpRule implements RuleInterface
         }
     }
 
+
     /**
      * Check get URL method
      *

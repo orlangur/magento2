@@ -34,6 +34,7 @@ class MassAction extends AbstractComponent
         parent::prepare();
     }
 
+
     /**
      * Get component name
      *

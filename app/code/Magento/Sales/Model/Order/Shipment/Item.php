@@ -168,7 +168,6 @@ class Item extends AbstractModel implements ShipmentItemInterface
     }
 
     //@codeCoverageIgnoreStart
-
     /**
      * Returns additional_data
      *
@@ -379,6 +378,5 @@ class Item extends AbstractModel implements ShipmentItemInterface
     {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

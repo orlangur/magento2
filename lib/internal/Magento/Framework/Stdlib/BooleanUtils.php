@@ -38,7 +38,6 @@ class BooleanUtils
         $this->trueValues = $trueValues;
         $this->falseValues = $falseValues;
     }
-
     // @codingStandardsIgnoreEnd
 
     /**

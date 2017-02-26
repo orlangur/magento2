@@ -48,6 +48,7 @@ foreach ($product->getOptions() as $option) {
     $options[] = $customOption;
 }
 
+
 $quote->load('test_order_1', 'reserved_order_id');
 $cartItem->setQty(1);
 $cartItem->setSku('simple');

@@ -213,6 +213,7 @@ class SensitiveCookieMetadataTest extends \PHPUnit_Framework_TestCase
      * @param StringUtils $expectedValue
      * @dataProvider getMethodData
      */
+
     public function testGetters($setMethodName, $getMethodName, $expectedValue)
     {
         $this->sensitiveCookieMetadata->$setMethodName($expectedValue);

@@ -91,7 +91,6 @@ class AfterAddressSave implements ObserverInterface
             }
         }
     }
-
     /**
      * Check whether specified billing address is default for its customer
      *

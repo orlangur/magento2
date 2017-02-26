@@ -172,6 +172,7 @@ class NewShippingTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
+
     public function testExecuteWhenCustomerAddressBlockNotExist()
     {
         $this->stateMock

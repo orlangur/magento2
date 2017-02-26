@@ -1607,6 +1607,5 @@ class Invoice extends AbstractModel implements EntityInterface, InvoiceInterface
     {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

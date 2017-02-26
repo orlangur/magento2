@@ -26,7 +26,6 @@ class CategoriesFixtureTest extends \PHPUnit_Framework_TestCase
 
         $this->model = new CategoriesFixture($this->fixtureModelMock);
     }
-
     public function testExecute()
     {
         $categoryMock = $this->getMock(

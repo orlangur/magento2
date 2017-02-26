@@ -433,6 +433,7 @@ class Import extends \Magento\ImportExport\Model\AbstractModel
             $this->importHistoryModel->invalidateReport($this);
         }
 
+
         return $result;
     }
 
@@ -747,6 +748,7 @@ class Import extends \Magento\ImportExport\Model\AbstractModel
         }
         return $this;
     }
+
 
     /**
      * Get count of created items

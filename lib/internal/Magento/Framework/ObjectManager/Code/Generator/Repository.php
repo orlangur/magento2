@@ -137,7 +137,6 @@ class Repository extends \Magento\Framework\Code\Generator\EntityAbstract
         return
             str_replace('Interface', '', $this->getSourceClassName()) . 'SearchResultInterfaceFactory';
     }
-
     /**
      * Returns source persistor class name
      *

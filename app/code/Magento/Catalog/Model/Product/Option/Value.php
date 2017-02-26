@@ -172,7 +172,6 @@ class Value extends AbstractModel implements \Magento\Catalog\Api\Data\ProductCu
         $this->_product = $product;
         return $this;
     }
-
     //@codeCoverageIgnoreEnd
 
     /**
@@ -367,7 +366,6 @@ class Value extends AbstractModel implements \Magento\Catalog\Api\Data\ProductCu
     {
         return $this->_getData(self::KEY_OPTION_TYPE_ID);
     }
-
     /**
      * Set option title
      *
@@ -433,6 +431,5 @@ class Value extends AbstractModel implements \Magento\Catalog\Api\Data\ProductCu
     {
         return $this->setData(self::KEY_OPTION_TYPE_ID, $optionTypeId);
     }
-
     //@codeCoverageIgnoreEnd
 }

@@ -98,7 +98,6 @@ class CheckExpirePersistentQuoteObserverTest extends \PHPUnit_Framework_TestCase
         $this->eventManagerMock->expects($this->never())->method('dispatch');
         $this->model->execute($this->observerMock);
     }
-
     public function testExecuteWhenPersistentIsEnabled()
     {
         $this->persistentHelperMock

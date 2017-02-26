@@ -55,6 +55,7 @@ class NewBillingTest extends \PHPUnit_Framework_TestCase
      */
     protected $titleMock;
 
+
     protected function setUp()
     {
         $objectManager = new ObjectManager($this);
@@ -123,6 +124,7 @@ class NewBillingTest extends \PHPUnit_Framework_TestCase
         $this->viewMock->expects($this->once())->method('renderLayout');
         $this->controller->execute();
     }
+
 
     public function testExecuteWhenCustomerAddressBlockNotExist()
     {

@@ -6,6 +6,7 @@
 
 namespace Magento\Security\Test\TestCase;
 
+
 use Magento\User\Test\Page\Adminhtml\UserEdit;
 use Magento\User\Test\Page\Adminhtml\UserIndex;
 use Magento\Mtf\TestCase\Injectable;

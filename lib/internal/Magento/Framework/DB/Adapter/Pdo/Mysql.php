@@ -540,6 +540,7 @@ class Mysql extends \Zend_Db_Adapter_Pdo_Mysql implements AdapterInterface
         } while ($retry);
     }
 
+
     /**
      * Special handling for PDO query().
      * All bind parameter names must begin with ':'.
@@ -3247,6 +3248,7 @@ class Mysql extends \Zend_Db_Adapter_Pdo_Mysql implements AdapterInterface
      * @return string
      * @codeCoverageIgnore
      */
+
     public function getTriggerName($tableName, $time, $event)
     {
         $triggerName = 'trg_' . $tableName . '_' . $time . '_' . $event;

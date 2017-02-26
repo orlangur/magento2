@@ -4,6 +4,7 @@
  * See COPYING.txt for license details.
  */
 
+
 namespace Magento\Setup\Model;
 
 use Magento\Framework\Module\ModuleList\Loader as ModuleLoader;

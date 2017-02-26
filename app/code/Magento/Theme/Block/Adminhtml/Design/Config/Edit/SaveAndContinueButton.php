@@ -9,6 +9,7 @@ use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 class SaveAndContinueButton implements ButtonProviderInterface
 {
+
     /**
      * @return array
      */

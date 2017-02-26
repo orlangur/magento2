@@ -6,6 +6,7 @@
  */
 namespace Magento\Quote\Test\Unit\Model\Cart;
 
+
 use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
 
 class CartTotalManagementTest extends \PHPUnit_Framework_TestCase

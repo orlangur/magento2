@@ -114,6 +114,7 @@ class CategoryProcessor
         return $category->getId();
     }
 
+
     /**
      * Returns ID of category by string path creating nonexistent ones.
      *

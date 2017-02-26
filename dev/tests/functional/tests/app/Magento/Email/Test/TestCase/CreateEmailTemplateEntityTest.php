@@ -66,6 +66,7 @@ class CreateEmailTemplateEntityTest extends Injectable
     /**
      * @param EmailTemplate $emailTemplate
      */
+
     public function test(EmailTemplate $emailTemplate)
     {
         $this->emailTemplateIndex->open();

@@ -491,7 +491,6 @@ interface CreditmemoInterface extends \Magento\Framework\Api\ExtensibleDataInter
      * @return int|null Credit memo shipping address ID.
      */
     public function getShippingAddressId();
-
     /**
      * Gets the credit memo shipping amount.
      *

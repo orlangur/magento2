@@ -48,7 +48,6 @@ class Invalid implements \Magento\Framework\Notification\MessageInterface
     }
 
     //@codeCoverageIgnoreStart
-
     /**
      * Retrieve unique message identity
      *
@@ -85,6 +84,5 @@ class Invalid implements \Magento\Framework\Notification\MessageInterface
     {
         return self::SEVERITY_MAJOR;
     }
-
     //@codeCoverageIgnoreEnd
 }

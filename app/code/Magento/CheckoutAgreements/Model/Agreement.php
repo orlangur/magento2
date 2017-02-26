@@ -215,6 +215,5 @@ class Agreement extends \Magento\Framework\Model\AbstractExtensibleModel impleme
     ) {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

@@ -34,6 +34,7 @@ class SetLinkStatusObserver implements ObserverInterface
         $this->_itemsFactory = $itemsFactory;
     }
 
+
     /**
      * Set status of link
      *

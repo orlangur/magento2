@@ -5,6 +5,7 @@
  */
 namespace Magento\Framework\Data;
 
+
 /**
  * Class AbstractSearchResult
  */

@@ -27,7 +27,6 @@ class ConfigsApplyFixtureTest extends \PHPUnit_Framework_TestCase
 
         $this->model = new ConfigsApplyFixture($this->fixtureModelMock);
     }
-
     public function testExecute()
     {
         $cacheMock = $this->getMock(\Magento\Framework\App\Cache::class, [], [], '', false);

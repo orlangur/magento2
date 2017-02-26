@@ -118,7 +118,6 @@ class Status extends AbstractExtensibleModel implements StockStatusInterface
     {
         return $this->getData(self::KEY_STOCK_STATUS);
     }
-
     //@codeCoverageIgnoreEnd
 
     /**
@@ -197,6 +196,5 @@ class Status extends AbstractExtensibleModel implements StockStatusInterface
     ) {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

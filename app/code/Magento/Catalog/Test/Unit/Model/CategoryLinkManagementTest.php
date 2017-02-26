@@ -6,6 +6,7 @@
 
 namespace Magento\Catalog\Test\Unit\Model;
 
+
 class CategoryLinkManagementTest extends \PHPUnit_Framework_TestCase
 {
     /**

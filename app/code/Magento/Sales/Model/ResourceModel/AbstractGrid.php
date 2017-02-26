@@ -67,7 +67,6 @@ abstract class AbstractGrid extends AbstractDb implements GridInterface
     {
         return $this->getTable($this->gridTableName);
     }
-
     /**
      * Purge grid row
      *

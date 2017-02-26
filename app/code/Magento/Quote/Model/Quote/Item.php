@@ -1045,7 +1045,6 @@ class Item extends \Magento\Quote\Model\Quote\Item\AbstractItem implements \Mage
     {
         return $this->setData(self::KEY_PRODUCT_OPTION, $productOption);
     }
-
     //@codeCoverageIgnoreEnd
 
     /**

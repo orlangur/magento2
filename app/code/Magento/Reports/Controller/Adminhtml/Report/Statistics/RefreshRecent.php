@@ -6,6 +6,7 @@
  */
 namespace Magento\Reports\Controller\Adminhtml\Report\Statistics;
 
+
 class RefreshRecent extends \Magento\Reports\Controller\Adminhtml\Report\Statistics
 {
     /**

@@ -67,6 +67,7 @@ class Website
             return $this->websites = $websites;
         }
 
+
         if ($storeId = $this->locator->getStore()->getId()) {
             /** @var WebsiteInterface $website */
             $website = $this->storeManager->getStore($storeId)->getWebsite();

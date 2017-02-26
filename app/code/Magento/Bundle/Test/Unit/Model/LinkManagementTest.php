@@ -488,6 +488,7 @@ class LinkManagementTest extends \PHPUnit_Framework_TestCase
             ->with($this->linkField)
             ->willReturn($this->linkField);
 
+
         $linkedProductMock = $this->getMock(\Magento\Catalog\Model\Product::class, [], [], '', false);
         $linkedProductMock->expects($this->any())->method('getId')->will($this->returnValue(13));
         $linkedProductMock->expects($this->once())->method('isComposite')->will($this->returnValue(false));

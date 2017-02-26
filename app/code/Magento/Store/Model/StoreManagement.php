@@ -25,7 +25,6 @@ class StoreManagement implements StoreManagementInterface
     {
         $this->storesFactory = $storesFactory;
     }
-
     /**
      * {@inheritdoc}
      */

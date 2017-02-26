@@ -231,7 +231,6 @@ class Rule extends \Magento\Framework\Model\AbstractExtensibleModel implements T
     {
         return $this->getData(self::KEY_PRIORITY);
     }
-
     //@codeCoverageIgnoreEnd
 
     /**

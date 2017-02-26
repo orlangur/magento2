@@ -74,7 +74,6 @@ class RecreatedIntegration implements \Magento\Framework\Notification\MessageInt
     }
 
     //@codeCoverageIgnoreStart
-
     /**
      * Retrieve unique message identity
      *
@@ -108,6 +107,5 @@ class RecreatedIntegration implements \Magento\Framework\Notification\MessageInt
     {
         return self::SEVERITY_MAJOR;
     }
-
     //@codeCoverageIgnoreEnd
 }

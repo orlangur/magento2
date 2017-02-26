@@ -814,7 +814,6 @@ class Transaction extends AbstractModel implements TransactionInterface
     }
 
     //@codeCoverageIgnoreStart
-
     /**
      * Returns transaction_id
      *
@@ -994,6 +993,5 @@ class Transaction extends AbstractModel implements TransactionInterface
     {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

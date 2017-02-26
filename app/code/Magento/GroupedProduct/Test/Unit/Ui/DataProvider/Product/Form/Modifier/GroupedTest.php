@@ -81,6 +81,7 @@ class GroupedTest extends AbstractModifierTest
      */
     protected $storeMock;
 
+
     protected function setUp()
     {
         $this->objectManager = new ObjectManager($this);

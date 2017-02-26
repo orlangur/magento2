@@ -205,7 +205,6 @@ abstract class AbstractCalculator
     {
         $this->customerId = $customerId;
     }
-
     // @codeCoverageIgnoreEnd
 
     /**

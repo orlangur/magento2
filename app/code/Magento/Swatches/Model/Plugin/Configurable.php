@@ -5,6 +5,7 @@
  */
 namespace Magento\Swatches\Model\Plugin;
 
+
 use Magento\ConfigurableProduct\Model\Product\Type\Configurable as ConfigurableProductType;
 use Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable\Product\Collection;
 

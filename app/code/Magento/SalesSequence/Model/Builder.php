@@ -105,6 +105,7 @@ class Builder
         $this->data = array_flip($this->pattern);
     }
 
+
     /**
      * @param string $entityType
      * @return $this

@@ -6,6 +6,7 @@
 
 namespace Magento\Multishipping\Test\Unit\Block\Checkout\Billing;
 
+
 class ItemsTest extends \PHPUnit_Framework_TestCase
 {
     /**

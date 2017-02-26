@@ -49,6 +49,7 @@ class FlushCacheByTagsTest extends \PHPUnit_Framework_TestCase
 
         $this->tagResolver = $this->getMock(\Magento\Framework\App\Cache\Tag\Resolver::class, [], [], '', false);
 
+
         $helper->setBackwardCompatibleProperty($this->_model, 'tagResolver', $this->tagResolver);
         $reflection = new \ReflectionClass(\Magento\PageCache\Observer\FlushCacheByTags::class);
         $reflectionProperty = $reflection->getProperty('fullPageCache');

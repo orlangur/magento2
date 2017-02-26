@@ -5,6 +5,7 @@
  */
 namespace Magento\Catalog\Test\Unit\Model\Product;
 
+
 /**
  * ProductType Test
  *

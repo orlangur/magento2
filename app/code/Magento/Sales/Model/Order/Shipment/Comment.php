@@ -222,6 +222,5 @@ class Comment extends AbstractModel implements ShipmentCommentInterface
     ) {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

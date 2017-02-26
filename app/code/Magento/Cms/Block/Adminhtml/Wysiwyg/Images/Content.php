@@ -5,6 +5,7 @@
  */
 namespace Magento\Cms\Block\Adminhtml\Wysiwyg\Images;
 
+
 /**
  * Wysiwyg Images content block
  */

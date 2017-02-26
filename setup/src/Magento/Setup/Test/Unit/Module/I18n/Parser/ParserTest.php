@@ -27,6 +27,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
      */
     protected $factory;
 
+
     protected function setUp()
     {
         $this->filesCollector = $this->getMock(\Magento\Setup\Module\I18n\FilesCollector::class);

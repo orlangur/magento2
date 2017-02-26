@@ -20,7 +20,6 @@ class BundleProductsFixture extends Fixture
     protected $priority = 42;
 
     //@codingStandardsIgnoreStart
-
     /**
      * Get CSV template headers
      * @SuppressWarnings(PHPMD)
@@ -406,7 +405,6 @@ class BundleProductsFixture extends Fixture
             throw new \Exception($import->getFormatedLogTrace());
         }
     }
-
     // @codingStandardsIgnoreEnd
 
     /**

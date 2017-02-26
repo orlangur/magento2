@@ -25,6 +25,7 @@ class EditAddressTest extends \PHPUnit_Framework_TestCase
      */
     protected $configMock;
 
+
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject
      */
@@ -131,6 +132,7 @@ class EditAddressTest extends \PHPUnit_Framework_TestCase
         $this->viewMock->expects($this->once())->method('renderLayout');
         $this->controller->execute();
     }
+
 
     public function testExecuteWhenCustomerAddressBlockNotExist()
     {

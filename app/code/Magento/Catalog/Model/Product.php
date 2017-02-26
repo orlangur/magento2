@@ -541,7 +541,6 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
     {
         return $this->_getData(self::NAME);
     }
-
     //@codeCoverageIgnoreEnd
 
     /**
@@ -620,7 +619,6 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
     {
         return $this->_getData(self::TYPE_ID);
     }
-
     //@codeCoverageIgnoreEnd
 
     /**
@@ -2522,7 +2520,6 @@ class Product extends \Magento\Catalog\Model\AbstractModel implements
     {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 
     /**

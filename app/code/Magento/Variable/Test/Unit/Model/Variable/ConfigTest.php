@@ -6,6 +6,7 @@
 
 namespace Magento\Variable\Test\Unit\Model\Variable;
 
+
 use Magento\Framework\TestFramework\Unit\Helper\ObjectManager;
 
 class ConfigTest extends \PHPUnit_Framework_TestCase

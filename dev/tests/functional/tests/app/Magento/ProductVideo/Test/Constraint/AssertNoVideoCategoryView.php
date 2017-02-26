@@ -16,6 +16,7 @@ use Magento\Catalog\Test\Page\Category\CatalogCategoryView;
  */
 class AssertNoVideoCategoryView extends AbstractConstraint
 {
+
     /**
      * Assert that video is absent on category page on Store front.
      *

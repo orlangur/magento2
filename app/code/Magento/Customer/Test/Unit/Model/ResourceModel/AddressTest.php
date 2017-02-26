@@ -41,6 +41,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase
             false
         );
 
+
         $this->entityRelationCompositeMock = $this->getMock(
             \Magento\Framework\Model\ResourceModel\Db\VersionControl\RelationComposite::class,
             [],

@@ -104,7 +104,6 @@ class View extends AbstractProduct implements \Magento\Framework\DataObject\Iden
             $data
         );
     }
-
     // @codingStandardsIgnoreEnd
 
     /**

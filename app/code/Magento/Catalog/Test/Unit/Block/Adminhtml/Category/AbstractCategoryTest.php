@@ -106,6 +106,7 @@ class AbstractCategoryTest extends \PHPUnit_Framework_TestCase
         $saveUrl = 'save URL';
         $params = ['_current' => false, '_query' => false, 'store' => $storeId];
 
+
         $this->requestMock->expects($this->once())->method('getParam')->with('store')->willReturn($storeId);
         $this->storeManagerMock->expects($this->once())
             ->method('getStore')

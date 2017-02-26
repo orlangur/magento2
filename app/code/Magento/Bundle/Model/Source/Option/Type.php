@@ -78,7 +78,6 @@ class Type extends \Magento\Framework\Model\AbstractExtensibleModel implements
     }
 
     //@codeCoverageIgnoreStart
-
     /**
      * {@inheritdoc}
      */
@@ -137,6 +136,5 @@ class Type extends \Magento\Framework\Model\AbstractExtensibleModel implements
     {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
-
     //@codeCoverageIgnoreEnd
 }

@@ -6,6 +6,7 @@
 
 namespace Magento\Framework\Model\Test\Unit;
 
+
 class AbstractModelTest extends \PHPUnit_Framework_TestCase
 {
     /**

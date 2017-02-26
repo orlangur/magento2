@@ -129,7 +129,6 @@ class CreatePostTest extends \PHPUnit_Framework_TestCase
      * @var \Magento\Framework\Controller\Result\RedirectFactory|\PHPUnit_Framework_MockObject_MockObject
      */
     protected $resultRedirectFactoryMock;
-
     /**
      * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */

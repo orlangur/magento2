@@ -6,6 +6,7 @@
 
 namespace Magento\CatalogSearch\Model\Adapter\Mysql\Filter;
 
+
 use Magento\CatalogSearch\Model\Search\RequestGenerator;
 
 /**
