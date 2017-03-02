@@ -49,10 +49,10 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
                 \Magento\Setup\Module\I18n\Dictionary\Writer\Csv::class,
                 TESTS_TEMP_DIR . '/filename.csv'
             ],
-            [
-                \Magento\Setup\Module\I18n\Dictionary\Writer\Csv\Stdo::class,
-                ''
-            ],
+//            [
+//                \Magento\Setup\Module\I18n\Dictionary\Writer\Csv\Stdo::class,
+//                ''
+//            ],
         ];
     }
 }
