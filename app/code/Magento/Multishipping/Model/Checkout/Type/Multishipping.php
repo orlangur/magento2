@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Multishipping\Model\Checkout\Type;
 
 use Magento\Customer\Api\AddressRepositoryInterface;

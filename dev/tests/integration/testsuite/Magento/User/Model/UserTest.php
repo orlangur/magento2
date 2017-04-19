@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\User\Model;
 use Magento\Framework\Serialize\Serializer\Json;
 

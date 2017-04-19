@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 /**
  * \Magento\Framework\Cache\Core test case
  */

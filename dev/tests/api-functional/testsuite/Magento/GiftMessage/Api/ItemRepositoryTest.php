@@ -5,7 +5,6 @@
  */
 namespace Magento\GiftMessage\Api;
 
-
 use Magento\TestFramework\TestCase\WebapiAbstract;
 
 class ItemRepositoryTest extends WebapiAbstract

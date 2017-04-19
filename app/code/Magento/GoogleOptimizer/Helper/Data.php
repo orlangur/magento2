@@ -6,7 +6,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\GoogleOptimizer\Helper;
 
 use \Magento\Store\Model\ScopeInterface;

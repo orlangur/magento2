@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\Webapi\Test\Unit;
 
 use Magento\Framework\Serialize\SerializerInterface;

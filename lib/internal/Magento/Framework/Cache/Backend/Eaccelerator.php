@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\Cache\Backend;
 
 class Eaccelerator extends \Zend_Cache_Backend implements \Zend_Cache_Backend_ExtendedInterface

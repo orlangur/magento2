@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\ConfigurableProduct\Test\Unit\Helper;
 
 class DataTest extends \PHPUnit_Framework_TestCase

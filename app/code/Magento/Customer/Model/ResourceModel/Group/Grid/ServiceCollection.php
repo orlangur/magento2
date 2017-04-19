@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Customer\Model\ResourceModel\Group\Grid;
 
 use Magento\Framework\Data\Collection\EntityFactory;

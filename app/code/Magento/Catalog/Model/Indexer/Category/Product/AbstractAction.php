@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Catalog\Model\Indexer\Category\Product;
 
 use Magento\Framework\DB\Query\Generator as QueryGenerator;

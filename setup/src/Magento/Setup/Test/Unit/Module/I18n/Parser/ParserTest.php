@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Setup\Test\Unit\Module\I18n\Parser;
 
 use Magento\Setup\Module\I18n\Parser as Parser;

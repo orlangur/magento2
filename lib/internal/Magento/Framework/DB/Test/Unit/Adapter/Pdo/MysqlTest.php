@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\DB\Test\Unit\Adapter\Pdo;
 
 use Magento\Framework\DB\Adapter\AdapterInterface;

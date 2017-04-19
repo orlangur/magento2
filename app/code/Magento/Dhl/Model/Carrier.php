@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Dhl\Model;
 
 use Magento\Catalog\Model\Product\Type;

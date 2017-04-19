@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Tax\Model\Sales\Total\Quote;
 
 use Magento\Customer\Api\Data\AddressInterfaceFactory as CustomerAddressFactory;

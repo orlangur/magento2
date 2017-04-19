@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\GiftMessage\Helper;
 
 use Magento\Catalog\Model\Product\Attribute\Source\Boolean;

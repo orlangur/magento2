@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Catalog\Block\Product\ProductList;
 
 use Magento\Catalog\Model\ResourceModel\Product\Collection;

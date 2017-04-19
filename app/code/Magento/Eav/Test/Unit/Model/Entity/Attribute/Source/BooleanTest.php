@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Eav\Test\Unit\Model\Entity\Attribute\Source;
 
 use Magento\Eav\Model\Entity\AbstractEntity;

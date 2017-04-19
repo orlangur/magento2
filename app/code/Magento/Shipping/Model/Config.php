@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Shipping\Model;
 
 class Config extends \Magento\Framework\DataObject

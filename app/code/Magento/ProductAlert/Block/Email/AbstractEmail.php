@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\ProductAlert\Block\Email;
 
 use Magento\Framework\Pricing\PriceCurrencyInterface;

@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Fedex\Model;
 
 use Magento\Framework\App\ObjectManager;

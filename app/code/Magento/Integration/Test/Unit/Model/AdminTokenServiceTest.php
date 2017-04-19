@@ -6,7 +6,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Integration\Test\Unit\Model;
 
 use Magento\Integration\Model\Integration;

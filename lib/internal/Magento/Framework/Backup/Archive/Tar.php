@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 /**
  * Extended version of \Magento\Framework\Archive\Tar that supports filtering
  *

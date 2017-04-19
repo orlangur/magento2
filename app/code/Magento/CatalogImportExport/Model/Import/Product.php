@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\CatalogImportExport\Model\Import;
 
 use Magento\Catalog\Model\Product\Visibility;

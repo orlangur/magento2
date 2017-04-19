@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\CustomerImportExport\Model\Export;
 
 use Magento\CustomerImportExport\Model\Import\Address as ImportAddress;

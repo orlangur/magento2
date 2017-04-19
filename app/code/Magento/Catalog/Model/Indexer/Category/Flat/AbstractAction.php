@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Catalog\Model\Indexer\Category\Flat;
 
 use Magento\Framework\App\ResourceConnection;

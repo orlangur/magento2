@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Shipping\Model\Carrier;
 
 use Magento\Quote\Model\Quote\Address\RateResult\Error;

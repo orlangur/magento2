@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\CustomerImportExport\Test\Unit\Model\Import;
 
 use Magento\CustomerImportExport\Model\Import\CustomerComposite;

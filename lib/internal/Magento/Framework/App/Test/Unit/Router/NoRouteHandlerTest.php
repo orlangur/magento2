@@ -6,7 +6,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\App\Test\Unit\Router;
 
 class NoRouteHandlerTest extends \Magento\Framework\TestFramework\Unit\BaseTestCase

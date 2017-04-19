@@ -6,7 +6,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Customer\Model\Metadata\Form;
 
 use Magento\Framework\Api\ArrayObjectSearch;

@@ -6,7 +6,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\Translate;
 
 class Inline implements \Magento\Framework\Translate\InlineInterface

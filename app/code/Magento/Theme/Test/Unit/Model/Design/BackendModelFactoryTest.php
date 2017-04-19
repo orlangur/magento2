@@ -5,7 +5,6 @@
  */
 namespace Magento\Theme\Test\Unit\Model\Design;
 
-
 class BackendModelFactoryTest extends \PHPUnit_Framework_TestCase
 {
     /** @var \Magento\Theme\Model\Design\BackendModelFactory */

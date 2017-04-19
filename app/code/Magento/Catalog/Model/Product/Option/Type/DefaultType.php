@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Catalog\Model\Product\Option\Type;
 
 use Magento\Framework\Exception\LocalizedException;

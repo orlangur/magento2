@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Checkout\Test\Unit\Helper;
 
 use \Magento\Checkout\Helper\Data;

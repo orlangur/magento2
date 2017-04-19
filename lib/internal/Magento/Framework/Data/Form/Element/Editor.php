@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\Data\Form\Element;
 
 use Magento\Framework\Escaper;

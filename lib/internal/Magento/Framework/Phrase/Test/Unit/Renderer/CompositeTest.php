@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\Phrase\Test\Unit\Renderer;
 
 use \Magento\Framework\Phrase\Renderer\Composite;

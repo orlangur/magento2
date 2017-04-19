@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Paypal\Test\Unit\Model\Express;
 
 use Magento\Quote\Model\Quote;

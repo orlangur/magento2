@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\GroupedProduct\Test\Unit\Model;
 
 use \Magento\Catalog\Model\Product;

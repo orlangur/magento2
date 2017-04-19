@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Payment\Model\Method;
 
 use Magento\Framework\DataObject;

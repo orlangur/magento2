@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Eav\Model\Attribute\Data;
 
 use Magento\Framework\App\RequestInterface;

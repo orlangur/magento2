@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\CatalogInventory\Model;
 
 use Magento\Catalog\Model\ProductFactory;

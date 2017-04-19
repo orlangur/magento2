@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\App\Test\Unit\Response;
 
 use \Magento\Framework\App\Response\Http;

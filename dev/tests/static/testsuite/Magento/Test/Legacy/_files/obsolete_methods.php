@@ -6,7 +6,6 @@
  * See COPYING.txt for license details.
  */
 
-
 return [
     ['__get', 'Magento\Framework\DataObject'],
     ['__set', 'Magento\Framework\DataObject'],

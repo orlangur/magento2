@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Framework\View\Test\Unit\Design\FileResolution\Fallback\Resolver;
 
 use \Magento\Framework\View\Design\FileResolution\Fallback\Resolver\Alternative;

@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\SendFriend\Controller\Product;
 
 use Magento\Framework\Exception\NoSuchEntityException;

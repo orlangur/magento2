@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 // @codingStandardsIgnoreStart
 namespace {
     $mockTranslateSetCookie = false;

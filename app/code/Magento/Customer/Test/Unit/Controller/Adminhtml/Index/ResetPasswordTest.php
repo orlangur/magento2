@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Customer\Test\Unit\Controller\Adminhtml\Index;
 
 use Magento\Customer\Api\Data\CustomerInterface;

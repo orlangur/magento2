@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Tax\Model\Calculation;
 
 use Magento\Directory\Model\Region;

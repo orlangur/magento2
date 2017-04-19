@@ -4,7 +4,6 @@
  * See COPYING.txt for license details.
  */
 
-
 namespace Magento\Customer\Test\Unit\Block\Account\Dashboard;
 
 use Magento\Framework\Exception\NoSuchEntityException;
