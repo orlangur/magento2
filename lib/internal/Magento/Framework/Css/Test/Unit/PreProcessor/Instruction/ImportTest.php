@@ -38,10 +38,17 @@ class ImportTest extends \PHPUnit_Framework_TestCase
     {
 
         $this->notationResolver = $this->getMock(
-            \Magento\Framework\View\Asset\NotationResolver\Module::class, [], [], '', false
+            \Magento\Framework\View\Asset\NotationResolver\Module::class,
+            [],
+            [],
+            '',
+            false
         );
         $contextMock = $this->getMockForAbstractClass(
-            \Magento\Framework\View\Asset\ContextInterface::class, [], '', false
+            \Magento\Framework\View\Asset\ContextInterface::class,
+            [],
+            '',
+            false
         );
         $contextMock->expects($this->any())->method('getPath')->willReturn('');
         $this->asset = $this->getMock(\Magento\Framework\View\Asset\File::class, [], [], '', false);

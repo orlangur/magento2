@@ -39,17 +39,17 @@ class DataTest extends \PHPUnit_Framework_TestCase
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject
      */
-    protected  $_checkoutSession;
+    protected $_checkoutSession;
 
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject
      */
-    protected  $_scopeConfig;
+    protected $_scopeConfig;
 
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject
      */
-    protected  $_collectionFactory;
+    protected $_collectionFactory;
 
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject

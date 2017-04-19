@@ -533,7 +533,8 @@ class CommonTaxCollector extends AbstractTotal
         $total->setSubtotalInclTax($subtotalInclTax);
         $total->setBaseSubtotalTotalInclTax($baseSubtotalInclTax);
         $total->setBaseSubtotalInclTax($baseSubtotalInclTax);
-        $shippingAssignment->getShipping()->getAddress()->setBaseSubtotalTotalInclTax($baseSubtotalInclTax);;
+        $shippingAssignment->getShipping()->getAddress()->setBaseSubtotalTotalInclTax($baseSubtotalInclTax);
+        ;
 
         return $this;
     }
@@ -548,7 +549,7 @@ class CommonTaxCollector extends AbstractTotal
     protected function processAppliedTaxes(
         QuoteAddress\Total $total,
         ShippingAssignmentInterface $shippingAssignment,
-        Array $itemsByType
+        array $itemsByType
     ) {
         $total->setAppliedTaxes([]);
         $allAppliedTaxesArray = [];

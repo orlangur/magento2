@@ -566,7 +566,7 @@ class Option extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
     
     /**
      * All Option Types that support price and price_type
-     * 
+     *
      * @return string[]
      */
     public function getPriceTypes()

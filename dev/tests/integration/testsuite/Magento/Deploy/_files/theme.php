@@ -38,7 +38,7 @@ if (!function_exists('rcopy')) {
         foreach ($iterator as $file) {
             if ($file->isFile()) {
                 copy($file->getRealPath(), $destination . '/' . $file->getFilename());
-            } else if (!$file->isDot() && $file->isDir()) {
+            } elseif (!$file->isDot() && $file->isDir()) {
                 rcopy($file->getRealPath(), $destination . '/' . $file);
             }
         }

@@ -504,11 +504,11 @@ FIRST_PORT_TYPE;
             $secondPortType = <<< SECOND_PORT_TYPE
 <portType name="testModule5AllSoapAndRestV2PortType">
 SECOND_PORT_TYPE;
-        $this->assertContains(
-            $this->_convertXmlToString($secondPortType),
-            $wsdlContent,
-            'Port type declaration is missing or invalid'
-        );
+            $this->assertContains(
+                $this->_convertXmlToString($secondPortType),
+                $wsdlContent,
+                'Port type declaration is missing or invalid'
+            );
         }
 
         if ($this->isSingleService) {
@@ -967,7 +967,6 @@ WRAPPED_ERRORS_COMPLEX_TYPE;
     </xsd:sequence>
 </xsd:complexType>
 WRAPPED_ERRORS_COMPLEX_TYPE;
-
         }
         // @codingStandardsIgnoreEnd
         $this->assertContains(

@@ -29,7 +29,7 @@ class UpgradeData implements UpgradeDataInterface
     
     /**
      * UpgradeData constructor
-     * 
+     *
      * @param FieldDataConverterFactory $fieldDataConverterFactory
      * @param \Magento\Framework\DB\Select\QueryModifierFactory $queryModifierFactory
      */

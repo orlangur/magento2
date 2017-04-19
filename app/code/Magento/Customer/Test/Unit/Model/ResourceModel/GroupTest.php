@@ -61,7 +61,8 @@ class GroupTest extends \PHPUnit_Framework_TestCase
             ['getDefaultGroup', 'getNotLoggedInGroup', 'isReadOnly', 'getLoggedInGroups', 'getAllCustomersGroup'],
             [],
             '',
-            false);
+            false
+        );
 
         $this->groupModel = $this->getMock(\Magento\Customer\Model\Group::class, [], [], '', false);
 
@@ -110,7 +111,7 @@ class GroupTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Test for save() method when we try to save entity with system's reserved ID.
-     * 
+     *
      * @return void
      */
     public function testSaveWithReservedId()

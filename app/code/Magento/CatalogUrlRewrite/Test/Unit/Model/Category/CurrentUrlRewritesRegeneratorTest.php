@@ -59,7 +59,7 @@ class CurrentUrlRewritesRegeneratorTest extends \PHPUnit_Framework_TestCase
         $this->mergeDataProvider = new \Magento\UrlRewrite\Model\MergeDataProvider;
         $mergeDataProviderFactory->expects($this->once())->method('create')->willReturn($this->mergeDataProvider);
 
-        $this->currentUrlRewritesRegenerator = (new ObjectManager($this))->getObject(   
+        $this->currentUrlRewritesRegenerator = (new ObjectManager($this))->getObject(
             \Magento\CatalogUrlRewrite\Model\Category\CurrentUrlRewritesRegenerator::class,
             [
                 'categoryUrlPathGenerator' => $this->categoryUrlPathGenerator,

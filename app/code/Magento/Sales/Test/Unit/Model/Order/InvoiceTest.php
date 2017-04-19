@@ -100,11 +100,11 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
             ),
             'calculatorFactory' => $this->getMock(
                 \Magento\Framework\Math\CalculatorFactory::class,
-                    [],
-                    [],
-                    '',
-                    false
-                ),
+                [],
+                [],
+                '',
+                false
+            ),
             'invoiceItemCollectionFactory' => $this->getMock(
                 \Magento\Sales\Model\ResourceModel\Order\Invoice\Item\CollectionFactory::class,
                 [],
@@ -227,7 +227,6 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
         $store = $this->helperManager->getObject(\Magento\Store\Model\Store::class, []);
         $this->orderMock->expects($this->once())->method('getStore')->willReturn($store);
         $this->assertEquals($store, $this->model->getStore());
-
     }
 
     public function testGetShippingAddress()
@@ -235,7 +234,6 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
         $address = $this->helperManager->getObject(\Magento\Sales\Model\Order\Address::class, []);
         $this->orderMock->expects($this->once())->method('getShippingAddress')->willReturn($address);
         $this->assertEquals($address, $this->model->getShippingAddress());
-
     }
 
     /**

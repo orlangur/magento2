@@ -66,8 +66,8 @@ class ConfigTest extends \Magento\TestFramework\TestCase\AbstractBackendControll
     {
         $baseUrlData = [
             'section' => 'web',
-            'website' => NULL,
-            'store' => NULL,
+            'website' => null,
+            'store' => null,
             'groups' => [
                 'unsecure' => [
                     'fields' => [
