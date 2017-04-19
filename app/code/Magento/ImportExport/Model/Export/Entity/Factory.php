@@ -28,7 +28,7 @@ class Factory
 
     /**
      * @param string $className
-     * @return \Magento\ImportExport\Model\Export\Entity\AbstractEntity|\Magento\ImportExport\Model\Export\AbstractEntity
+     * @return AbstractEntity|\Magento\ImportExport\Model\Export\AbstractEntity
      * @throws \InvalidArgumentException
      */
     public function create($className)

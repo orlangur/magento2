@@ -4,6 +4,8 @@
  * See COPYING.txt for license details.
  */
 
+// @codingStandardsIgnoreFile
+
 namespace Magento\CatalogImportExport\Model\Import;
 
 use Magento\Catalog\Model\Product\Visibility;
@@ -1160,10 +1162,10 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
                         foreach ($linkSkus as $linkedKey => $linkedSku) {
                             $linkedSku = trim($linkedSku);
                             if ((!is_null(
-                                $this->skuProcessor->getNewSku($linkedSku)
-                            ) || isset(
-                                $this->_oldSku[$linkedSku]
-                            )) && $linkedSku != $sku
+                                        $this->skuProcessor->getNewSku($linkedSku)
+                                    ) || isset(
+                                        $this->_oldSku[$linkedSku]
+                                    )) && $linkedSku != $sku
                             ) {
                                 $newSku = $this->skuProcessor->getNewSku($linkedSku);
                                 if (!empty($newSku)) {
@@ -1229,8 +1231,7 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
                 // process linked product positions
                 $this->_connection->insertOnDuplicate(
                     $resource->getAttributeTypeTable('int'),
-                    $positionRows,
-                    ['value']
+                    $positionRows, ['value']
                 );
             }
         }
@@ -1740,7 +1741,8 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
                     $attrTable = $attribute->getBackend()->getTable();
                     $storeIds = [0];
 
-                    if ('datetime' == $attribute->getBackendType()
+                    if (
+                        'datetime' == $attribute->getBackendType()
                         && (
                             in_array($attribute->getAttributeCode(), $this->dateAttrCodes)
                             || $attribute->getIsUserDefined()
@@ -2199,9 +2201,13 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
      */
     public function retrieveAttributeByCode($attrCode)
     {
+        /** @var string $attrCode */
+        $attrCode = mb_strtolower($attrCode);
+
         if (!isset($this->_attributeCache[$attrCode])) {
             $this->_attributeCache[$attrCode] = $this->getResource()->getAttribute($attrCode);
         }
+
         return $this->_attributeCache[$attrCode];
     }
 
@@ -2366,10 +2372,10 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
             if (!isset($rowData[self::COL_TYPE]) || !isset($this->_productTypeModels[$rowData[self::COL_TYPE]])) {
                 $this->addRowError(ValidatorInterface::ERROR_INVALID_TYPE, $rowNum);
             } elseif (!isset(
-                $rowData[self::COL_ATTR_SET]
-            ) || !isset(
-                $this->_attrSetNameToId[$rowData[self::COL_ATTR_SET]]
-            )
+                    $rowData[self::COL_ATTR_SET]
+                ) || !isset(
+                    $this->_attrSetNameToId[$rowData[self::COL_ATTR_SET]]
+                )
             ) {
                 $this->addRowError(ValidatorInterface::ERROR_INVALID_ATTR_SET, $rowNum);
             } elseif (is_null($this->skuProcessor->getNewSku($sku))) {
@@ -2535,6 +2541,7 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
                 continue;
             }
             list($code, $value) = explode(self::PAIR_NAME_VALUE_SEPARATOR, $attributeData, 2);
+            $code = mb_strtolower($code);
             $preparedAttributes[$code] = $value;
         }
         return $preparedAttributes;
@@ -2561,8 +2568,7 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
     private function parseAttributesWithWrappedValues($attributesData)
     {
         $attributes = [];
-        preg_match_all(
-            '~((?:[a-z0-9_])+)="((?:[^"]|""|"' . $this->getMultiLineSeparatorForRegexp() . '")+)"+~',
+        preg_match_all('~((?:[a-zA-Z0-9_])+)="((?:[^"]|""|"' . $this->getMultiLineSeparatorForRegexp() . '")+)"+~',
             $attributesData,
             $matches
         );
@@ -2571,7 +2577,7 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
             $value = 'multiselect' != $attribute->getFrontendInput()
                 ? str_replace('""', '"', $matches[2][$i])
                 : '"' . $matches[2][$i] . '"';
-            $attributes[$attributeCode] = $value;
+            $attributes[mb_strtolower($attributeCode)] = $value;
         }
         return $attributes;
     }

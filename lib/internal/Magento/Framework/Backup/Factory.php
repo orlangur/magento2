@@ -1,11 +1,12 @@
 <?php
 /**
- * Backup object factory.
- *
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
+/**
+ * Backup object factory.
+ */
 namespace Magento\Framework\Backup;
 
 class Factory

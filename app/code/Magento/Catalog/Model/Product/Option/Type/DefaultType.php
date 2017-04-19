@@ -7,6 +7,7 @@
 namespace Magento\Catalog\Model\Product\Option\Type;
 
 use Magento\Framework\Exception\LocalizedException;
+use Magento\Catalog\Api\Data\ProductCustomOptionInterface;
 
 /**
  * Catalog product option default type
@@ -364,7 +365,7 @@ class DefaultType extends \Magento\Framework\DataObject
                     $this->_productOptions[$this->getProduct()->getId()][$_option->getTitle()] = [
                         'option_id' => $_option->getId(),
                     ];
-                    if ($_option->getGroupByType() == \Magento\Catalog\Model\Product\Option::OPTION_GROUP_SELECT) {
+                    if ($_option->getGroupByType() == ProductCustomOptionInterface::OPTION_GROUP_SELECT) {
                         $optionValues = [];
                         foreach ($_option->getValues() as $_value) {
                             /* @var $value \Magento\Catalog\Model\Product\Option\Value */
