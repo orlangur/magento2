@@ -23,7 +23,6 @@ use Magento\Framework\App\ObjectManager;
  *
  * @SuppressWarnings(PHPMD.TooManyFields)
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
- * @codingStandardsIgnoreFile
  */
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
