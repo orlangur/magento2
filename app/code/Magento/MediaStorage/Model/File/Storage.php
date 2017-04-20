@@ -168,7 +168,7 @@ class Storage extends AbstractModel
      */
     public function getStorageModel($storage = null, $params = [])
     {
-        if (is_null($storage)) {
+        if ($storage === null) {
             $storage = $this->_coreFileStorage->getCurrentStorageCode();
         }
 

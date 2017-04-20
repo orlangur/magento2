@@ -6,7 +6,7 @@
 
 namespace Magento\Framework\Interception\Test\Unit\Code;
 
-use \Magento\Framework\Interception\Code\InterfaceValidator;
+use Magento\Framework\Interception\Code\InterfaceValidator;
 
 class InterfaceValidatorTest extends \PHPUnit_Framework_TestCase
 {

@@ -44,7 +44,7 @@ class TaxAdjustmentTest extends \PHPUnit_Framework_TestCase
             ->method('convertAndRound')
             ->will($this->returnCallback(
                 function ($arg) {
-                        return round($arg * 0.5, 2);
+                    return round($arg * 0.5, 2);
                 }
             ));
         $this->priceCurrencyMock->expects($this->any())

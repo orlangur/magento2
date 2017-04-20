@@ -444,7 +444,7 @@ abstract class AbstractCarrier extends \Magento\Framework\DataObject implements 
         /**
          * if we did not get our free shipping method in response we must use its old price
          */
-        if (!is_null($price)) {
+        if ($price !== null) {
             $this->_result->getRateById($freeRateId)->setPrice($price);
         }
     }

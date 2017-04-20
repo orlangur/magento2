@@ -113,7 +113,6 @@ class VariationHandlerTest extends \PHPUnit_Framework_TestCase
 
     public function testPrepareAttributeSet()
     {
-
         $productMock = $this->getMockBuilder(\Magento\Catalog\Model\Product::class)
             ->setMethods(['getNewVariationsAttributeSetId'])
             ->disableOriginalConstructor()
@@ -173,8 +172,7 @@ class VariationHandlerTest extends \PHPUnit_Framework_TestCase
                 'name' => 'config-red',
                 'configurable_attribute' => '{"new_attr":"6"}',
                 'sku' => 'config-red',
-                'quantity_and_stock_status' =>
-                    [
+                'quantity_and_stock_status' => [
                         'qty' => '',
                     ],
             ]

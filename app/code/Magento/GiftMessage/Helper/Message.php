@@ -326,7 +326,7 @@ class Message extends \Magento\Framework\App\Helper\AbstractHelper
     public function getGiftMessage($messageId = null)
     {
         $message = $this->_giftMessageFactory->create();
-        if (!is_null($messageId)) {
+        if ($messageId !== null) {
             $message->load($messageId);
         }
         return $message;

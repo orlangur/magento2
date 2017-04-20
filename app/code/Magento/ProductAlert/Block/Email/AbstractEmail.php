@@ -102,7 +102,7 @@ abstract class AbstractEmail extends \Magento\Framework\View\Element\Template
      */
     public function getStore()
     {
-        if (is_null($this->_store)) {
+        if ($this->_store === null) {
             $this->_store = $this->_storeManager->getStore();
         }
         return $this->_store;

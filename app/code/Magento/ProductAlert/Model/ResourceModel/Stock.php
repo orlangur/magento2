@@ -50,14 +50,14 @@ class Stock extends \Magento\ProductAlert\Model\ResourceModel\AbstractResource
      */
     protected function _beforeSave(\Magento\Framework\Model\AbstractModel $object)
     {
-        if (is_null($object->getId()) && $object->getCustomerId() && $object->getProductId() && $object->getWebsiteId()
+        if ($object->getId() === null&& $object->getCustomerId() && $object->getProductId() && $object->getWebsiteId()
         ) {
             if ($row = $this->_getAlertRow($object)) {
                 $object->addData($row);
                 $object->setStatus(0);
             }
         }
-        if (is_null($object->getAddDate())) {
+        if ($object->getAddDate() === null) {
             $object->setAddDate($this->_dateFactory->create()->gmtDate());
             $object->setStatus(0);
         }

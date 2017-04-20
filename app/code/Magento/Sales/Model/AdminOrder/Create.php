@@ -665,7 +665,7 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
      */
     public function getCustomerWishlist($cacheReload = false)
     {
-        if (!is_null($this->_wishlist) && !$cacheReload) {
+        if ($this->_wishlist !== null&& !$cacheReload) {
             return $this->_wishlist;
         }
 
@@ -692,7 +692,7 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
      */
     public function getCustomerCart()
     {
-        if (!is_null($this->_cart)) {
+        if ($this->_cart !== null) {
             return $this->_cart;
         }
 
@@ -720,7 +720,7 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
      */
     public function getCustomerCompareList()
     {
-        if (!is_null($this->_compareList)) {
+        if ($this->_compareList !== null) {
             return $this->_compareList;
         }
         $customerId = (int)$this->getSession()->getCustomerId();
@@ -792,7 +792,7 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
                     break;
                 case 'cart':
                     $cart = $this->getCustomerCart();
-                    if ($cart && is_null($item->getOptionByCode('additional_options'))) {
+                    if ($cart && $item->getOptionByCode('additional_options') === null) {
                         //options and info buy request
                         $product = $this->_objectManager->create(
                             \Magento\Catalog\Model\Product::class
@@ -1330,7 +1330,7 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
         $data = isset($data['region']) && is_array($data['region']) ? array_merge($data, $data['region']) : $data;
 
         $addressForm = $this->_metadataFormFactory->create(
-            
+
             AddressMetadataInterface::ENTITY_TYPE_ADDRESS,
             'adminhtml_customer_address',
             $data,
@@ -1709,7 +1709,7 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
         }
         $data = $form->restoreData($data);
         foreach ($data as $key => $value) {
-            if (!is_null($value)) {
+            if ($value !== null) {
                 unset($data[$key]);
             }
         }
@@ -1832,12 +1832,12 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
 
         switch ($addressType) {
             case \Magento\Quote\Model\Quote\Address::ADDRESS_TYPE_BILLING:
-                if (is_null($customer->getDefaultBilling())) {
+                if ($customer->getDefaultBilling() === null) {
                     $customerAddress->setIsDefaultBilling(true);
                 }
                 break;
             case \Magento\Quote\Model\Quote\Address::ADDRESS_TYPE_SHIPPING:
-                if (is_null($customer->getDefaultShipping())) {
+                if ($customer->getDefaultShipping() === null) {
                     $customerAddress->setIsDefaultShipping(true);
                 }
                 break;
@@ -1928,7 +1928,7 @@ class Create extends \Magento\Framework\DataObject implements \Magento\Checkout\
     protected function _validate()
     {
         $customerId = $this->getSession()->getCustomerId();
-        if (is_null($customerId)) {
+        if ($customerId === null) {
             throw new \Magento\Framework\Exception\LocalizedException(__('Please select a customer'));
         }
 

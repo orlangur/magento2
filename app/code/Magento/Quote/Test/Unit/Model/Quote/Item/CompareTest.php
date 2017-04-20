@@ -216,7 +216,7 @@ class CompareTest extends \PHPUnit_Framework_TestCase
                 'non-empty-option' => 'test'
             ]))
         ]);
-        
+
         $this->assertTrue($this->helper->compare($this->itemMock, $this->comparedMock));
     }
 }

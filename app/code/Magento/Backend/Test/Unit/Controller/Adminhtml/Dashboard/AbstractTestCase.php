@@ -27,8 +27,7 @@ class AbstractTestCase extends \PHPUnit_Framework_TestCase
             [],
             '',
             false
-        )
-        ;
+        );
         $resultRawFactoryMock = $this->getMock(
             \Magento\Framework\Controller\Result\RawFactory::class,
             ['create'],

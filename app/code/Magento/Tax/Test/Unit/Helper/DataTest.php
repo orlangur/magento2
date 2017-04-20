@@ -260,7 +260,7 @@ class DataTest extends \PHPUnit_Framework_TestCase
             ->method('round')
             ->will($this->returnCallback(
                 function ($arg) {
-                        return round($arg, 2);
+                    return round($arg, 2);
                 }
             ));
 
@@ -268,7 +268,7 @@ class DataTest extends \PHPUnit_Framework_TestCase
         foreach ($result as $index => $appliedTax) {
             $expectedTax = $expectedResults[$index];
             foreach ($appliedTax as $attr => $value) {
-                $this->assertEquals($expectedTax[$attr], $value, "The ".$attr." of tax does not match");
+                $this->assertEquals($expectedTax[$attr], $value, "The " . $attr . " of tax does not match");
             }
         }
     }
@@ -486,7 +486,6 @@ class DataTest extends \PHPUnit_Framework_TestCase
         $isCrossBorderTradeEnabled,
         $displayPriceIncludingTax
     ) {
-    
         if ($displayBothPrices == true) {
             $this->taxConfigMock->expects($this->at(0))
                 ->method('getPriceDisplayType')

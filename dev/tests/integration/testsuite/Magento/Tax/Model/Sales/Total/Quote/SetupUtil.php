@@ -7,8 +7,8 @@
 namespace Magento\Tax\Model\Sales\Total\Quote;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Tax\Model\Config;
 use Magento\Tax\Model\Calculation;
+use Magento\Tax\Model\Config;
 
 /**
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)

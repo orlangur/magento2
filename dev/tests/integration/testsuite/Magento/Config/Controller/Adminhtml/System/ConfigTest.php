@@ -29,16 +29,11 @@ class ConfigTest extends \Magento\TestFramework\TestCase\AbstractBackendControll
         $newHost = 'm2test123.loc';
         $request = $this->getRequest();
         $request->setPostValue(
-            ['groups' =>
-                ['unsecure' =>
-                    ['fields' =>
-                        ['base_url' =>
-                            ['value' => 'http://' . $newHost . '/']
+            ['groups' => ['unsecure' => ['fields' => ['base_url' => ['value' => 'http://' . $newHost . '/']
                         ]
                     ]
                 ],
-            'config_state' =>
-                ['web_unsecure' => 1]
+            'config_state' => ['web_unsecure' => 1]
             ]
         )->setParam(
             'section',

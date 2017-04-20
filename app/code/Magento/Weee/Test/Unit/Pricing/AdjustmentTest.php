@@ -6,10 +6,9 @@
 
 namespace Magento\Weee\Test\Unit\Pricing;
 
-use \Magento\Weee\Pricing\Adjustment;
-
-use Magento\Framework\Pricing\SaleableInterface;
 use Magento\Weee\Helper\Data as WeeeHelper;
+
+use Magento\Weee\Pricing\Adjustment;
 
 class AdjustmentTest extends \PHPUnit_Framework_TestCase
 {
@@ -41,7 +40,7 @@ class AdjustmentTest extends \PHPUnit_Framework_TestCase
             ->method('convertAndRound')
             ->will($this->returnCallback(
                 function ($arg) {
-                        return round($arg * 0.5, 2);
+                    return round($arg * 0.5, 2);
                 }
             ));
         $this->priceCurrencyMock->expects($this->any())

@@ -6,7 +6,7 @@
 
 namespace Magento\Framework\Mview\Test\Unit\Config\Data;
 
-use \Magento\Framework\Mview\Config\Data\Proxy;
+use Magento\Framework\Mview\Config\Data\Proxy;
 
 class ProxyTest extends \PHPUnit_Framework_TestCase
 {

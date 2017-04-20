@@ -297,7 +297,7 @@ class AbstractTemplateTest extends \PHPUnit_Framework_TestCase
 
         $filterTemplate->expects($this->once())
             ->method('filter')
-            ->will($this->throwException(new \Exception));
+            ->will($this->throwException(new \Exception()));
         $model->getProcessedTemplate([]);
     }
 
