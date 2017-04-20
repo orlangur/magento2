@@ -8,6 +8,8 @@ namespace Magento\Catalog\Helper\Product;
 
 /**
  * Class ProductList
+ *
+ * @api
  */
 class ProductList
 {

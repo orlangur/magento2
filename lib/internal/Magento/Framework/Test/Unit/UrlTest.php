@@ -124,7 +124,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
         );
         if ($resolve) {
             $routeParamsResolverFactoryMock->expects($this->once())->method('create')
-                    ->will($this->returnValue($this->routeParamsResolverMock));
+                ->will($this->returnValue($this->routeParamsResolverMock));
         }
         return $routeParamsResolverFactoryMock;
     }
@@ -291,7 +291,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
         $this->urlModifier->expects($this->exactly(1))->method('execute');
 
-        $this->assertEquals('catalog/product/view', $model->getUrl('catalog/product/view'));
         $this->assertEquals('catalog/product/view', $model->getUrl('catalog/product/view'));
     }
 

@@ -240,7 +240,11 @@ class Inline implements \Magento\Framework\Translate\InlineInterface
             }
         } else {
             if (is_string($body)) {
-                $body = preg_replace('#' . \Magento\Framework\Translate\Inline\ParserInterface::REGEXP_TOKEN . '#', '$1', $body);
+                $body = preg_replace(
+                    '#' . \Magento\Framework\Translate\Inline\ParserInterface::REGEXP_TOKEN . '#',
+                    '$1',
+                    $body
+                );
             }
         }
         return $this;

@@ -54,11 +54,6 @@ class MysqlTest extends \PHPUnit_Framework_TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-//        StringUtils $string,
-//        DateTime $dateTime,
-//        LoggerInterface $logger,
-//        SelectFactory $selectFactory,
-//        array $config = []
         $this->_mockAdapter = $this->getMock(
             \Magento\Framework\DB\Adapter\Pdo\Mysql::class,
             ['beginTransaction', 'getTransactionLevel'],
@@ -78,8 +73,8 @@ class MysqlTest extends \PHPUnit_Framework_TestCase
         );
 
         $this->_mockAdapter->expects($this->any())
-             ->method('getTransactionLevel')
-             ->will($this->returnValue(1));
+            ->method('getTransactionLevel')
+            ->will($this->returnValue(1));
 
         $this->_adapter = $this->getMock(
             \Magento\Framework\DB\Adapter\Pdo\Mysql::class,

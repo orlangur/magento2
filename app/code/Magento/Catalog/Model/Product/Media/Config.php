@@ -12,6 +12,8 @@ use Magento\Store\Model\StoreManagerInterface;
 /**
  * Catalog product media config
  *
+ * @api
+ *
  * @author      Magento Core Team <core@magentocommerce.com>
  */
 class Config implements ConfigInterface
