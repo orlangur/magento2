@@ -8,6 +8,7 @@ namespace Magento\Bundle\Block\Catalog\Product\View\Type\Bundle;
 
 /**
  * Bundle option renderer
+ * @api
  */
 class Option extends \Magento\Bundle\Block\Catalog\Product\Price
 {

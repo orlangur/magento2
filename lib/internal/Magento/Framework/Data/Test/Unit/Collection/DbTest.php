@@ -440,9 +440,9 @@ class DbTest extends \PHPUnit_Framework_TestCase
         $adapterMock->expects($this->exactly(2))
             ->method('quoteInto')
             ->will($this->returnValueMap([
-                        ['testField1=?', 'testValue1', null, null, 'testField1=testValue1'],
-                        ['testField4=?', 'testValue4', null, null, 'testField4=testValue4'],
-                    ]));
+                ['testField1=?', 'testValue1', null, null, 'testField1=testValue1'],
+                ['testField4=?', 'testValue4', null, null, 'testField4=testValue4'],
+            ]));
         $selectMock->expects($this->once())
             ->method('orWhere')
             ->with('testField1=testValue1');

@@ -9,12 +9,13 @@ namespace {
     $mockTranslateSetCookie = false;
 }
 
-namespace Magento\Framework\Stdlib\Test\Unit\Cookie {
-    // @codingStandardsIgnoreEnd
+namespace Magento\Framework\Stdlib\Test\Unit\Cookie
+{
     use Magento\Framework\Stdlib\Cookie\PhpCookieManager;
     use Magento\Framework\Exception\InputException;
     use Magento\Framework\Stdlib\Cookie\FailureToSendException;
     use Magento\Framework\Stdlib\Cookie\CookieSizeLimitReachedException;
+    // @codingStandardsIgnoreEnd
 
     /**
      * Test PhpCookieManager
@@ -47,7 +48,7 @@ namespace Magento\Framework\Stdlib\Test\Unit\Cookie {
         /**
          * Mapping from constant names to functions that handle the assertions.
          */
-        static $functionTestAssertionMapping = [
+        protected static $functionTestAssertionMapping = [
             self::DELETE_COOKIE_NAME => 'self::assertDeleteCookie',
             self::DELETE_COOKIE_NAME_NO_METADATA => 'self::assertDeleteCookieWithNoMetadata',
             self::SENSITIVE_COOKIE_NAME_NO_METADATA_HTTPS => 'self::assertSensitiveCookieWithNoMetaDataHttps',
@@ -73,6 +74,7 @@ namespace Magento\Framework\Stdlib\Test\Unit\Cookie {
          * @var \Magento\Framework\Stdlib\Cookie\PhpCookieManager
          */
         protected $cookieManager;
+
         /**
          * @var \PHPUnit_Framework_MockObject_MockObject|CookieScopeInterface
          */

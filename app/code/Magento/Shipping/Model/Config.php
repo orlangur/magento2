@@ -6,6 +6,10 @@
 
 namespace Magento\Shipping\Model;
 
+/**
+ * Class Config
+ * @api
+ */
 class Config extends \Magento\Framework\DataObject
 {
     /**

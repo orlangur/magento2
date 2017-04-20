@@ -52,7 +52,10 @@ class FormFactory
         $form = $this->_objectManager->create($this->_instanceName, $data);
         if (!$form instanceof \Magento\Framework\Data\Form) {
             throw new \Magento\Framework\Exception\LocalizedException(
-                new \Magento\Framework\Phrase('%1 doesn\'t extend \Magento\Framework\Data\Form', [$this->_instanceName])
+                new \Magento\Framework\Phrase(
+                    '%1 doesn\'t extend \Magento\Framework\Data\Form',
+                    [$this->_instanceName]
+                )
             );
         }
         return $form;

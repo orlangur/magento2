@@ -9,6 +9,9 @@ namespace Magento\Paypal\Model\Api;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Phrase;
 
+/**
+ * @api
+ */
 class ProcessableException extends LocalizedException
 {
     /**#@+

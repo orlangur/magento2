@@ -65,9 +65,9 @@ class CompositeTest extends \PHPUnit_Framework_TestCase
             'render'
         )->with(
             [
-                    $text,
-                    $resultAfterFirst,
-                ],
+                $text,
+                $resultAfterFirst,
+            ],
             $arguments
         )->will(
             $this->returnValue($resultAfterSecond)
