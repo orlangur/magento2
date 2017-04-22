@@ -5,6 +5,7 @@
  */
 
 namespace Magento\Catalog\Helper\Product;
+
 use Magento\Store\Model\ScopeInterface;
 
 /**
@@ -23,6 +24,7 @@ class ProductList
     const VIEW_MODE_GRID = 'grid';
 
     const DEFAULT_SORT_DIRECTION = 'asc';
+
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */

@@ -56,7 +56,7 @@ class Samples extends \Magento\Catalog\Block\Product\AbstractProduct
         }
         return $this->_scopeConfig->getValue(
             \Magento\Downloadable\Model\Sample::XML_PATH_SAMPLES_TITLE,
-                \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }
 

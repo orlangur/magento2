@@ -5,6 +5,7 @@
  */
 
 namespace Magento\SendFriend\Helper;
+
 use Magento\Store\Model\ScopeInterface;
 
 /**

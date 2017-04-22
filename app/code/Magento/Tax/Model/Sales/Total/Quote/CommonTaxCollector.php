@@ -308,7 +308,12 @@ class CommonTaxCollector extends AbstractTotal
             }
 
             if ($item->getHasChildren() && $item->isChildrenCalculated()) {
-                $parentItemDataObject = $this->mapItem($itemDataObjectFactory, $item, $priceIncludesTax, $useBaseCurrency);
+                $parentItemDataObject = $this->mapItem(
+                    $itemDataObjectFactory,
+                    $item,
+                    $priceIncludesTax,
+                    $useBaseCurrency
+                );
                 $itemDataObjects[] = $parentItemDataObject;
                 foreach ($item->getChildren() as $child) {
                     $childItemDataObject = $this->mapItem(
@@ -672,8 +677,14 @@ class CommonTaxCollector extends AbstractTotal
     ) {
         $total->setTotalAmount('shipping', $shippingTaxDetails->getRowTotal());
         $total->setBaseTotalAmount('shipping', $baseShippingTaxDetails->getRowTotal());
-        $total->setTotalAmount('shipping_discount_tax_compensation', $shippingTaxDetails->getDiscountTaxCompensationAmount());
-        $total->setBaseTotalAmount('shipping_discount_tax_compensation', $baseShippingTaxDetails->getDiscountTaxCompensationAmount());
+        $total->setTotalAmount(
+            'shipping_discount_tax_compensation',
+            $shippingTaxDetails->getDiscountTaxCompensationAmount()
+        );
+        $total->setBaseTotalAmount(
+            'shipping_discount_tax_compensation',
+            $baseShippingTaxDetails->getDiscountTaxCompensationAmount()
+        );
 
         $total->setShippingInclTax($shippingTaxDetails->getRowTotalInclTax());
         $total->setBaseShippingInclTax($baseShippingTaxDetails->getRowTotalInclTax());

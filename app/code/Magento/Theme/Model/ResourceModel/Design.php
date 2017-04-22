@@ -62,8 +62,9 @@ class Design extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
             $object->setDateTo(null);
         }
 
-        if ($object->getDateFrom() !== null&& $object->getDateTo() !== null&& (new \DateTime($object->getDateFrom()))->getTimestamp()
-            > (new \DateTime($object->getDateTo()))->getTimestamp()
+        if ($object->getDateFrom() !== null && $object->getDateTo() !== null
+            && (new \DateTime($object->getDateFrom()))->getTimestamp()
+                > (new \DateTime($object->getDateTo()))->getTimestamp()
         ) {
             throw new \Magento\Framework\Exception\LocalizedException(
                 __('The start date can\'t follow the end date.')

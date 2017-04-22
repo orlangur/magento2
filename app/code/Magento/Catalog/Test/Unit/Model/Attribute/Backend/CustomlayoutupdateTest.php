@@ -93,11 +93,11 @@ class CustomlayoutupdateTest extends \PHPUnit_Framework_TestCase
         $mock->expects($this->any())
             ->method('isValid')
             ->will(
-                /**
-                 * @param string $xml
-                 * $return bool
-                 */
                 $this->returnCallback(
+                    /**
+                     * @param string $xml
+                     * $return bool
+                     */
                     function ($xml) {
                         if ($xml == 'exception') {
                             return false;
