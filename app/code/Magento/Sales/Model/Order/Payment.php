@@ -1166,6 +1166,7 @@ class Payment extends Info implements OrderPaymentInterface
     /**
      * @param Transaction|null $transaction
      * @param string $message
+     * @return void
      */
     public function addTransactionCommentsToOrder($transaction, $message)
     {

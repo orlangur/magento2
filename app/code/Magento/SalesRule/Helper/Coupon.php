@@ -5,6 +5,7 @@
  */
 
 namespace Magento\SalesRule\Helper;
+
 use Magento\Store\Model\ScopeInterface;
 
 /**

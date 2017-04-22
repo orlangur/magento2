@@ -805,9 +805,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * TODO: put together style and giropay settings
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_SetExpressCheckout
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callSetExpressCheckout()
     {
@@ -838,9 +838,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * GetExpressCheckoutDetails call
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_GetExpressCheckoutDetails
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callGetExpressCheckoutDetails()
     {
@@ -855,9 +855,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * DoExpressCheckout call
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_DoExpressCheckoutPayment
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callDoExpressCheckoutPayment()
     {
@@ -896,9 +896,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * Do Reference Transaction call
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_DoReferenceTransaction
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callDoReferenceTransaction()
     {
@@ -950,9 +950,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * DoAuthorization call
      *
      * @return $this
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_DoAuthorization
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callDoAuthorization()
     {
@@ -980,9 +980,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * GetTransactionDetails
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_GetTransactionDetails
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callGetTransactionDetails()
     {
@@ -995,9 +995,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * RefundTransaction call
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_RefundTransaction
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callRefundTransaction()
     {
@@ -1013,9 +1013,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * ManagePendingTransactionStatus
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_ManagePendingTransactionStatus
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callManagePendingTransactionStatus()
     {
@@ -1044,9 +1044,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * Set Customer BillingA greement call
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_SetCustomerBillingAgreement
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callSetCustomerBillingAgreement()
     {
@@ -1059,9 +1059,9 @@ class Nvp extends \Magento\Paypal\Model\Api\AbstractApi
      * Get Billing Agreement Customer Details call
      *
      * @return void
-     * @condingStandardsIgnoreStart
+     * @codingStandardsIgnoreStart
      * @link https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/e_howto_api_nvp_r_GetBillingAgreementCustomerDetails
-     * @condingStandardsIgnoreEnd
+     * @codingStandardsIgnoreEnd
      */
     public function callGetBillingAgreementCustomerDetails()
     {

@@ -94,16 +94,14 @@ class CustomlayoutupdateTest extends \PHPUnit_Framework_TestCase
             ->method('isValid')
             ->will(
                 $this->returnCallback(
+                    // @codingStandardsIgnoreStart
                     /**
                      * @param string $xml
                      * $return bool
                      */
+                    // @codingStandardsIgnoreEnd
                     function ($xml) {
-                        if ($xml == 'exception') {
-                            return false;
-                        } else {
-                            return true;
-                        }
+                        return $xml != 'exception';
                     }
                 )
             );

@@ -5,6 +5,7 @@
  */
 
 namespace Magento\Review\Helper;
+
 use Magento\Store\Model\ScopeInterface;
 
 /**

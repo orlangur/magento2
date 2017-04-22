@@ -545,6 +545,7 @@ class CommonTaxCollector extends AbstractTotal
      * Process applied taxes for items and quote
      *
      * @param QuoteAddress\Total $total
+     * @param ShippingAssignmentInterface $shippingAssignment
      * @param array $itemsByType
      * @return $this
      */

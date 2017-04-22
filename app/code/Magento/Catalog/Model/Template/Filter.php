@@ -11,6 +11,7 @@
  * @todo        Needs to be reimplemented to get rid of the copypasted methods
  */
 namespace Magento\Catalog\Model\Template;
+
 use Magento\Framework\UrlInterface;
 
 /**

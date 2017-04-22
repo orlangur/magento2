@@ -11,6 +11,7 @@
  *
  */
 namespace Magento\Config\Block\System\Config\Form;
+
 use Magento\Framework\Data\Form\Element\Renderer\RendererInterface;
 
 /**

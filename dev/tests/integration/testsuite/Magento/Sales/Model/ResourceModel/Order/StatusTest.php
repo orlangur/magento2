@@ -40,10 +40,12 @@ class StatusTest extends \PHPUnit_Framework_TestCase
         $this->resourceModel->unassignState('fake_status_do_not_use_it', 'fake_state_do_not_use_it');
         $this->assertTrue(true);
         $this->assertFalse(
-            (bool)$this->resourceModel->getConnection()->fetchOne($this->resourceModel->getConnection()->select()
-                ->from($this->resourceModel->getTable('sales_order_status_state'), [new \Zend_Db_Expr(1)])
-                ->where('status = ?', 'fake_status_do_not_use_it')
-                ->where('state = ?', 'fake_state_do_not_use_it'))
+            (bool)$this->resourceModel->getConnection()->fetchOne(
+                $this->resourceModel->getConnection()->select()
+                    ->from($this->resourceModel->getTable('sales_order_status_state'), [new \Zend_Db_Expr(1)])
+                    ->where('status = ?', 'fake_status_do_not_use_it')
+                    ->where('state = ?', 'fake_state_do_not_use_it')
+            )
         );
     }
 }

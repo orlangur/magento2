@@ -167,7 +167,7 @@ class ProcessLayoutRenderElementTest extends \PHPUnit_Framework_TestCase
     {
         $expectedOutput = '<esi:include src="page_cache/block/wrapesi/with/handles/YW5kL290aGVyL3N0dWZm" />';
         $eventMock = $this->getMock(
-            'Magento\Framework\Event',
+            \Magento\Framework\Event::class,
             ['getLayout', 'getElementName', 'getTransport'],
             [],
             '',

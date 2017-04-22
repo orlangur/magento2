@@ -5,6 +5,7 @@
  */
 
 namespace Magento\ImportExport\Helper;
+
 use Magento\Store\Model\ScopeInterface;
 
 /**

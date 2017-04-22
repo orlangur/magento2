@@ -5,6 +5,7 @@
  */
 
 namespace Magento\Catalog\Test\Unit\Model\ResourceModel\Eav;
+
 use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 
 /**

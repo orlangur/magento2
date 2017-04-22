@@ -135,18 +135,18 @@ class Design extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
             $dateConditions[] = 'date_to IS NULL';
         }
 
-        if ($dateFrom === null&& $dateTo !== null) {
+        if ($dateFrom === null && $dateTo !== null) {
             $dateConditions[] = 'date_to <= :date_to OR date_from <= :date_to';
         }
 
-        if ($dateFrom !== null&& $dateTo === null) {
+        if ($dateFrom !== null && $dateTo === null) {
             $dateConditions[] = 'date_to >= :date_from OR date_from >= :date_from';
         }
 
-        if ($dateFrom !== null&& $dateTo !== null) {
+        if ($dateFrom !== null && $dateTo !== null) {
             $dateConditions[] = 'date_from BETWEEN :date_from AND :date_to';
             $dateConditions[] = 'date_to BETWEEN :date_from AND :date_to';
-        } elseif ($dateFrom === null&& $dateTo === null) {
+        } elseif ($dateFrom === null && $dateTo === null) {
             $dateConditions = [];
         }
 
