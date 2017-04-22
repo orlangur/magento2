@@ -25,12 +25,14 @@ interface CreditmemoManagementInterface
      */
     public function cancel($id);
 
+    // @codingStandardsIgnoreStart
     /**
      * Lists comments for a specified credit memo.
      *
      * @param int $id The credit memo ID.
      * @return \Magento\Sales\Api\Data\CreditmemoCommentSearchResultInterface Credit memo comment search results interface.
      */
+    // @codingStandardsIgnoreEnd
     public function getCommentsList($id);
 
     /**

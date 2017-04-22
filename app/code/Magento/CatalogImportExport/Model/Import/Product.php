@@ -177,6 +177,7 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
      * @var string
      */
     protected $mediaGalleryValueTableName;
+
     /**
      * @var string
      */
@@ -268,6 +269,7 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
         ValidatorInterface::ERROR_EXCEEDED_MAX_LENGTH => 'Attribute %s exceeded max length',
         ValidatorInterface::ERROR_INVALID_ATTRIBUTE_TYPE => 'Value for \'%s\' attribute contains incorrect value',
         ValidatorInterface::ERROR_ABSENT_REQUIRED_ATTRIBUTE => 'Attribute %s is required',
+        // @codingStandardsIgnoreStart
         ValidatorInterface::ERROR_INVALID_ATTRIBUTE_OPTION => 'Value for \'%s\' attribute contains incorrect value, see acceptable values on settings specified for Admin',
         ValidatorInterface::ERROR_DUPLICATE_UNIQUE_ATTRIBUTE => 'Duplicated unique attribute',
         ValidatorInterface::ERROR_INVALID_VARIATIONS_CUSTOM_OPTIONS => 'Value for \'%s\' sub attribute in \'%s\' attribute contains incorrect value, acceptable values are: \'dropdown\', \'checkbox\', \'radio\', \'text\'',
@@ -276,6 +278,7 @@ class Product extends \Magento\ImportExport\Model\Import\Entity\AbstractEntity
         ValidatorInterface::ERROR_MEDIA_URL_NOT_ACCESSIBLE => 'Imported resource (image) could not be downloaded from external resource due to timeout or access permissions',
         ValidatorInterface::ERROR_INVALID_WEIGHT => 'Product weight is invalid',
         ValidatorInterface::ERROR_DUPLICATE_URL_KEY => 'Url key: \'%s\' was already generated for an item with the SKU: \'%s\'. You need to specify the unique URL key manually'
+        // @codingStandardsIgnoreEnd
     ];
 
     /**

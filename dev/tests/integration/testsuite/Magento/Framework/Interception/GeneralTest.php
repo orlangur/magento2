@@ -17,7 +17,7 @@ class GeneralTest extends AbstractPlugin
             [\Magento\Framework\Interception\Fixture\InterceptedInterface::class => [
                         'plugins' => [
                             'first' => [
-                                'instance'  => \Magento\Framework\Interception\Fixture\Intercepted\InterfacePlugin::class,
+                                'instance'  => Fixture\Intercepted\InterfacePlugin::class,
                                 'sortOrder' => 10,
                             ],
                         ],

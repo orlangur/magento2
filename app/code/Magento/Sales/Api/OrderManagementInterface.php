@@ -24,12 +24,14 @@ interface OrderManagementInterface
      */
     public function cancel($id);
 
+    // @codingStandardsIgnoreStart
     /**
      * Lists comments for a specified order.
      *
      * @param int $id The order ID.
      * @return \Magento\Sales\Api\Data\OrderStatusHistorySearchResultInterface Order status history search results interface.
      */
+    // @codingStandardsIgnoreEnd
     public function getCommentsList($id);
 
     /**

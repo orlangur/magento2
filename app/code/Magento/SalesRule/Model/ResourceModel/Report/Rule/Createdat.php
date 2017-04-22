@@ -93,7 +93,8 @@ class Createdat extends \Magento\Reports\Model\ResourceModel\Report\AbstractRepo
                         'base_subtotal_canceled',
                         0
                     ) . ' - ' . $connection->getIfNullSql(
-                        'ABS(base_discount_amount) - ABS(' . $connection->getIfNullSql('base_discount_canceled', 0) . ')',
+                        'ABS(base_discount_amount) - ABS('
+                            . $connection->getIfNullSql('base_discount_canceled', 0) . ')',
                         0
                     ) . ' + ' . $connection->getIfNullSql(
                         'base_tax_amount - ' . $connection->getIfNullSql('base_tax_canceled', 0),

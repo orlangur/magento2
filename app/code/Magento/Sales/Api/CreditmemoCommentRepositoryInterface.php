@@ -25,6 +25,7 @@ interface CreditmemoCommentRepositoryInterface
      */
     public function get($id);
 
+    // @codingStandardsIgnoreStart
     /**
      * Lists credit memo comments that match specified search criteria.
      *
@@ -33,6 +34,7 @@ interface CreditmemoCommentRepositoryInterface
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria The search criteria.
      * @return \Magento\Sales\Api\Data\CreditmemoCommentSearchResultInterface Credit memo comment search results interface.
      */
+    // @codingStandardsIgnoreEnd
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
 
     /**
