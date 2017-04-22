@@ -6,6 +6,7 @@
  * See COPYING.txt for license details.
  */
 namespace Magento\Framework\Validator\Test\Unit;
+
 use Magento\Framework\App\Arguments\ValidationState;
 
 /**

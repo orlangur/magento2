@@ -460,7 +460,7 @@ class AccountTest extends \Magento\TestFramework\TestCase\AbstractController
         // Verify the password check box is not checked
         $this->assertContains(
             '<input type="checkbox" name="change_password" id="change-password" '
-                . 'data-role="change-password" value="1" title="Change&#x20;Password" class="checkbox" />',
+            . 'data-role="change-password" value="1" title="Change&#x20;Password" class="checkbox" />',
             $body
         );
     }

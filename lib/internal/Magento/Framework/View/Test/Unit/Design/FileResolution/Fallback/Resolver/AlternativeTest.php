@@ -57,7 +57,7 @@ class AlternativeTest extends \PHPUnit_Framework_TestCase
         $this->setExpectedException(
             '\InvalidArgumentException',
             "\$alternativeExtensions must be an array with format:"
-                . " array('ext1' => array('ext1', 'ext2'), 'ext3' => array(...)]"
+            . " array('ext1' => array('ext1', 'ext2'), 'ext3' => array(...)]"
         );
 
         $readFactory = $this->getMock(\Magento\Framework\Filesystem\Directory\ReadFactory::class, [], [], '', false);

@@ -23,8 +23,8 @@ interface OrderStatusHistoryRepositoryInterface
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria The search criteria.
      * @return \Magento\Sales\Api\Data\OrderStatusHistorySearchResultInterface Order status history search result interface.
      */
-    // @codingStandardsIgnoreEnd
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
+    // @codingStandardsIgnoreEnd
 
     /**
      * Loads a specified order status comment.

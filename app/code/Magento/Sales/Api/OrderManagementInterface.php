@@ -31,8 +31,8 @@ interface OrderManagementInterface
      * @param int $id The order ID.
      * @return \Magento\Sales\Api\Data\OrderStatusHistorySearchResultInterface Order status history search results interface.
      */
-    // @codingStandardsIgnoreEnd
     public function getCommentsList($id);
+    // @codingStandardsIgnoreEnd
 
     /**
      * Adds a comment to a specified order.

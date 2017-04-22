@@ -72,8 +72,7 @@ class CustomerRegistryTest extends \PHPUnit_Framework_TestCase
         //Verify presence of Customer in email registry
         $this->assertEquals(
             $customerBeforeDeletion,
-            $this->_model->retrieveByEmail(self::CUSTOMER_EMAIL,
-            self::WEBSITE_ID)
+            $this->_model->retrieveByEmail(self::CUSTOMER_EMAIL, self::WEBSITE_ID)
         );
     }
 

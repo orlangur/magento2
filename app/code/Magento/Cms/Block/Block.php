@@ -5,6 +5,7 @@
  */
 
 namespace Magento\Cms\Block;
+
 use Magento\Framework\DataObject\IdentityInterface;
 
 /**

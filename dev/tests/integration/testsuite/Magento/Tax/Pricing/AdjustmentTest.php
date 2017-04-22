@@ -42,7 +42,7 @@ class AdjustmentTest extends \PHPUnit_Framework_TestCase
      * @param bool $isShippingPriceExcludeTax
      * @param bool $expectedResult
      * @magentoConfigFixture current_store tax/calculation/price_includes_tax 0
-     * @dataProvider IsIncludedInBasePricePriceIncludeTaxDisabledDataProvider
+     * @dataProvider isIncludedInBasePricePriceIncludeTaxDisabledDataProvider
      */
     public function testIsIncludedInBasePricePriceIncludeTacDisabled($isShippingPriceExcludeTax, $expectedResult)
     {
@@ -63,7 +63,7 @@ class AdjustmentTest extends \PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public function IsIncludedInBasePricePriceIncludeTaxDisabledDataProvider()
+    public function isIncludedInBasePricePriceIncludeTaxDisabledDataProvider()
     {
         return [
             [0, false],

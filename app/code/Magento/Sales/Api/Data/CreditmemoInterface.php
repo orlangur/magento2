@@ -617,8 +617,8 @@ interface CreditmemoInterface extends \Magento\Framework\Api\ExtensibleDataInter
      *
      * @return \Magento\Sales\Api\Data\CreditmemoCommentInterface[]|null Array of any credit memo comments. Otherwise, null.
      */
-    // @codingStandardsIgnoreEnd
     public function getComments();
+    // @codingStandardsIgnoreEnd
 
     /**
      * Sets credit memo comments.

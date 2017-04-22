@@ -59,8 +59,8 @@ class Reorder extends \Magento\Framework\App\Helper\AbstractHelper
         if ($this->scopeConfig->getValue(
             self::XML_PATH_SALES_REORDER_ALLOW,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
-            $store)
-        ) {
+            $store
+        )) {
             return true;
         }
         return false;
