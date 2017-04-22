@@ -2,9 +2,9 @@
 library * /
 theme * /
 language * /
-#dev/tools/Magento
-#dev/tests
-#phpserver
-#pub
-#setup
-#*.php
+dev/tools/Magento
+dev/tests
+phpserver
+pub
+setup
+*.php
