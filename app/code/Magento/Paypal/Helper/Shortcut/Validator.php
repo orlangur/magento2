@@ -6,9 +6,6 @@
 
 namespace Magento\Paypal\Helper\Shortcut;
 
-/**
- * @SuppressWarnings(PHPMD.UnusedPrivateField)
- */
 class Validator implements ValidatorInterface
 {
     /**

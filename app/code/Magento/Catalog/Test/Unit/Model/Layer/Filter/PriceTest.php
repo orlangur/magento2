@@ -11,7 +11,6 @@ use PHPUnit_Framework_MockObject_MockObject as MockObject;
 
 /**
  * Test for \Magento\Catalog\Model\Layer\Filter\Price
- * @SuppressWarnings(PHPMD.UnusedPrivateField)
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class PriceTest extends \PHPUnit\Framework\TestCase

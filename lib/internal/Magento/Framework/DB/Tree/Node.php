@@ -7,9 +7,6 @@ namespace Magento\Framework\DB\Tree;
 
 use Magento\Framework\Exception\LocalizedException;
 
-/**
- * @SuppressWarnings(PHPMD.UnusedPrivateField)
- */
 class Node
 {
     /**
