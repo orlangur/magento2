@@ -7,6 +7,7 @@ namespace Magento\Framework\Code;
 
 use Magento\Framework\Code\Generator\DefinedClasses;
 use Magento\Framework\Code\Generator\EntityAbstract;
+use Magento\Framework\ObjectManager\ConfigInterface;
 
 class Generator
 {
@@ -214,6 +215,11 @@ class Generator
         } elseif (!isset($this->_generatedEntities[$resultEntityType])) {
             throw new \InvalidArgumentException('Unknown generation entity.');
         }
+
+        if (isset($this->objectManager->get(ConfigInterface::class)->getVirtualTypes()[$resultClass])) {
+            return self::GENERATION_SKIP;
+        }
+
         return false;
     }
 }
