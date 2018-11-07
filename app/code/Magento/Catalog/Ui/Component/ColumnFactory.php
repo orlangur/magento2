@@ -111,6 +111,6 @@ class ColumnFactory
     {
         $filtersMap = ['date' => 'dateRange'];
         $result = array_replace_recursive($this->dataTypeMap, $filtersMap);
-        return isset($result[$frontendInput]) ? $result[$frontendInput] : $result['default'];
+        return $result[$frontendInput] ?? $result['default'];
     }
 }

@@ -111,7 +111,7 @@ class PersonalInfoTest extends \PHPUnit\Framework\TestCase
         );
         foreach ($expectedCustomerData as $property => $value) {
             $expectedValue = is_numeric($value) ? intval($value) : $value;
-            $actualValue = isset($actualCustomerData[$property]) ? $actualCustomerData[$property] : null;
+            $actualValue = $actualCustomerData[$property] ?? null;
             $actualValue = is_numeric($actualValue) ? intval($actualValue) : $actualValue;
             $this->assertEquals($expectedValue, $actualValue);
         }

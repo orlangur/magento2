@@ -125,7 +125,7 @@ class Cart extends Block
     public function getCartItem(FixtureInterface $product)
     {
         $dataConfig = $product->getDataConfig();
-        $typeId = isset($dataConfig['type_id']) ? $dataConfig['type_id'] : null;
+        $typeId = $dataConfig['type_id'] ?? null;
         $cartItem = null;
 
         if ($this->hasRender($typeId)) {
