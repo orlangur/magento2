@@ -62,7 +62,7 @@ class Server
             foreach ($configuredHosts as $host) {
                 $servers[] = UriFactory::factory('')
                     ->setHost($host['host'])
-                    ->setPort($host['port'] ?? self::DEFAULT_PORT)
+                    ->setPort(isset($host['port']) ? $host['port'] : self::DEFAULT_PORT)
                 ;
             }
         } elseif ($this->request->getHttpHost()) {

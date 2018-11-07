@@ -210,7 +210,7 @@ class ValueProvider
                         'arguments' => [
                             'data' => [
                                 'config' => [
-                                    'value' => $labels[0] ?? '',
+                                    'value' => isset($labels[0]) ? $labels[0] : '',
                                 ],
                             ]
                         ]

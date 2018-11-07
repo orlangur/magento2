@@ -104,7 +104,9 @@ class ScopeOverriddenValue
             $this->initAttributeValues($entityType, $entity, (int)$entity->getStoreId());
         }
 
-        return $this->attributesValues[Store::DEFAULT_STORE_ID] ?? [];
+        return isset($this->attributesValues[Store::DEFAULT_STORE_ID])
+            ? $this->attributesValues[Store::DEFAULT_STORE_ID]
+            : [];
     }
 
     /**

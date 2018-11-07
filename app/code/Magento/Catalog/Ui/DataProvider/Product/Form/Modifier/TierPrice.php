@@ -115,7 +115,8 @@ class TierPrice extends AbstractModifier
                             'enableLabel' => true,
                             'dataScope' => '',
                             'additionalClasses' => 'control-grouped',
-                            'sortOrder' => $priceMeta['arguments']['data']['config']['sortOrder'] ?? 40,
+                            'sortOrder' => isset($priceMeta['arguments']['data']['config']['sortOrder'])
+                                ? $priceMeta['arguments']['data']['config']['sortOrder'] : 40,
                         ],
                     ],
                 ],

@@ -298,7 +298,7 @@ class Generator extends AbstractSchemaGenerator
             if (!isset($parameterInfo['type'])) {
                 return [];
             }
-            $description = $parameterInfo['documentation'] ?? null;
+            $description = isset($parameterInfo['documentation']) ? $parameterInfo['documentation'] : null;
 
             /** Get location of parameter */
             if (strpos($httpMethodData['uri'], '{' . $parameterName . '}') !== false) {
@@ -709,8 +709,9 @@ class Generator extends AbstractSchemaGenerator
         $queryNames = [];
         foreach ($parameters as $subParameterName => $subParameterInfo) {
             $subParameterType = $subParameterInfo['type'];
-            $subParameterDescription = $subParameterInfo['documentation']
-                ?? null;
+            $subParameterDescription = isset($subParameterInfo['documentation'])
+                ? $subParameterInfo['documentation']
+                : null;
             $subPrefix = $prefix
                 ? $prefix . '[' . $name . ']'
                 : $name;
@@ -828,7 +829,7 @@ class Generator extends AbstractSchemaGenerator
      */
     private function generateBodySchema($parameterName, $parameterInfo, $description, $bodySchema)
     {
-        $required = $parameterInfo['required'] ?? null;
+        $required = isset($parameterInfo['required']) ? $parameterInfo['required'] : null;
         /*
          * There can only be one body parameter, multiple PHP parameters are represented as different
          * properties of the body.

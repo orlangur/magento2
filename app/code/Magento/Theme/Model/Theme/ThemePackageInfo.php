@@ -67,7 +67,7 @@ class ThemePackageInfo
             if ($themeFile) {
                 $rawData = $this->serializer->unserialize($themeFile);
             }
-            return $rawData['name'] ?? '';
+            return isset($rawData['name']) ? $rawData['name'] : '';
         }
         return '';
     }

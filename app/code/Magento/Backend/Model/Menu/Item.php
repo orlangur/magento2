@@ -197,7 +197,7 @@ class Item
      */
     protected function _getArgument(array $array, $key, $defaultValue = null)
     {
-        return $array[$key] ?? $defaultValue;
+        return isset($array[$key]) ? $array[$key] : $defaultValue;
     }
 
     /**

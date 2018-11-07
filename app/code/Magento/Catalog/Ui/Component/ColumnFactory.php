@@ -96,7 +96,9 @@ class ColumnFactory
      */
     protected function getDataType($attribute)
     {
-        return $this->dataTypeMap[$attribute->getFrontendInput()] ?? $this->dataTypeMap['default'];
+        return isset($this->dataTypeMap[$attribute->getFrontendInput()])
+            ? $this->dataTypeMap[$attribute->getFrontendInput()]
+            : $this->dataTypeMap['default'];
     }
 
     /**
@@ -109,6 +111,6 @@ class ColumnFactory
     {
         $filtersMap = ['date' => 'dateRange'];
         $result = array_replace_recursive($this->dataTypeMap, $filtersMap);
-        return $result[$frontendInput] ?? $result['default'];
+        return isset($result[$frontendInput]) ? $result[$frontendInput] : $result['default'];
     }
 }

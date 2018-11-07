@@ -1008,7 +1008,7 @@ class Carrier extends AbstractCarrierOnline implements \Magento\Shipping\Model\C
         ];
         $currencyCode = $this->_storeManager->getStore()->getBaseCurrencyCode();
 
-        return $codes[$currencyCode] ?? $currencyCode;
+        return isset($codes[$currencyCode]) ? $codes[$currencyCode] : $currencyCode;
     }
 
     /**

@@ -622,7 +622,9 @@ class Carrier extends AbstractCarrierOnline implements \Magento\Shipping\Model\C
                 $rate->setCarrierTitle($this->getConfigData('title'));
                 $rate->setMethod($method);
                 $rate->setMethodTitle(
-                    $serviceCodeToActualNameMap[$method] ?? $this->getCode(
+                    isset(
+                        $serviceCodeToActualNameMap[$method]
+                    ) ? $serviceCodeToActualNameMap[$method] : $this->getCode(
                         'method',
                         $method
                     )

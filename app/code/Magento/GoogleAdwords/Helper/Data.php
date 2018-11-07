@@ -133,7 +133,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function convertLanguageCodeToLocaleCode($language)
     {
         $convertArray = (array)$this->scopeConfig->getValue(self::XML_PATH_LANGUAGE_CONVERT, 'default');
-        return $convertArray[$language] ?? $language;
+        return isset($convertArray[$language]) ? $convertArray[$language] : $language;
     }
 
     /**

@@ -210,9 +210,9 @@ class Combine extends AbstractCondition
     public function loadArray($arr, $key = 'conditions')
     {
         $this->setAggregator(
-            $arr['aggregator'] ?? ($arr['attribute'] ?? null)
+            isset($arr['aggregator']) ? $arr['aggregator'] : (isset($arr['attribute']) ? $arr['attribute'] : null)
         )->setValue(
-            $arr['value'] ?? ($arr['operator'] ?? null)
+            isset($arr['value']) ? $arr['value'] : (isset($arr['operator']) ? $arr['operator'] : null)
         );
 
         if (!empty($arr[$key]) && is_array($arr[$key])) {

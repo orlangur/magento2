@@ -178,7 +178,7 @@ class Config implements ActionInterface
                 $this->data['fieldsets'][$fieldsetName]['fields'][$fieldName]['handler'] =
                     $this->handlerPool->get($field['handler']);
                 $this->data['fieldsets'][$fieldsetName]['fields'][$fieldName]['dataType'] =
-                    $field['dataType'] ?? 'varchar';
+                    isset($field['dataType']) ? $field['dataType'] : 'varchar';
             }
         }
     }

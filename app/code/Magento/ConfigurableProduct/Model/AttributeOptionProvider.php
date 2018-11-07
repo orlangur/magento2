@@ -65,8 +65,9 @@ class AttributeOptionProvider implements AttributeOptionProviderInterface
             }
 
             foreach ($data as $key => $value) {
-                $optionText = $optionLabels[$value['value_index']]
-                    ?? false;
+                $optionText = isset($optionLabels[$value['value_index']])
+                    ? $optionLabels[$value['value_index']]
+                    : false;
                 $data[$key]['default_title'] = $optionText;
                 $data[$key]['option_title'] = $optionText;
             }

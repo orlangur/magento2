@@ -163,7 +163,9 @@ class Invoice extends AbstractItems
 
                     if ($option['value']) {
                         $text = [];
-                        $printValue = $option['print_value'] ?? $this->filterManager->stripTags(
+                        $printValue = isset(
+                            $option['print_value']
+                        ) ? $option['print_value'] : $this->filterManager->stripTags(
                             $option['value']
                         );
                         $values = explode(', ', $printValue);

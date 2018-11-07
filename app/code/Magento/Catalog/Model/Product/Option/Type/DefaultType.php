@@ -388,7 +388,10 @@ class DefaultType extends \Magento\Framework\DataObject
                 }
             }
         }
-        return $this->_productOptions[$this->getProduct()->getId()] ?? [];
+        if (isset($this->_productOptions[$this->getProduct()->getId()])) {
+            return $this->_productOptions[$this->getProduct()->getId()];
+        }
+        return [];
     }
 
     /**

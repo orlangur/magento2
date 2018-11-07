@@ -139,7 +139,7 @@ class StructurePlugin
     private function restructurePayments(Section $result)
     {
         $sectionData = $result->getData();
-        $sectionInitialStructure = $sectionData['children'] ?? [];
+        $sectionInitialStructure = isset($sectionData['children']) ? $sectionData['children'] : [];
         $sectionChangedStructure = $this->paymentSectionModifier->modify($sectionInitialStructure);
         $sectionData['children'] = $sectionChangedStructure;
         $result->setData($sectionData, $this->scopeDefiner->getScope());

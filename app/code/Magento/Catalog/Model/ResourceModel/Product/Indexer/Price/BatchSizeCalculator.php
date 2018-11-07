@@ -50,10 +50,14 @@ class BatchSizeCalculator
      */
     public function estimateBatchSize(\Magento\Framework\DB\Adapter\AdapterInterface $connection, $indexerTypeId)
     {
-        $batchRowsCount = $this->batchRowsCount[$indexerTypeId] ?? $this->batchRowsCount['default'];
+        $batchRowsCount = isset($this->batchRowsCount[$indexerTypeId])
+            ? $this->batchRowsCount[$indexerTypeId]
+            : $this->batchRowsCount['default'];
 
         /** @var \Magento\Framework\Indexer\BatchSizeManagementInterface $calculator */
-        $calculator = $this->estimators[$indexerTypeId] ?? $this->estimators['default'];
+        $calculator = isset($this->estimators[$indexerTypeId])
+            ? $this->estimators[$indexerTypeId]
+            : $this->estimators['default'];
 
         $batchRowsCount = isset($this->batchSizeAdjusters[$indexerTypeId])
             ? $this->batchSizeAdjusters[$indexerTypeId]->adjust($batchRowsCount)

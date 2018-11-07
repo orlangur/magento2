@@ -152,7 +152,7 @@ class TierPriceValidator
         foreach ($prices as $key => $price) {
             $this->checkSku($price, $key, $skuDiff, $validationResult);
             $this->checkPrice($price, $key, $validationResult);
-            $ids = $idsBySku[$price->getSku()] ?? [];
+            $ids = isset($idsBySku[$price->getSku()]) ? $idsBySku[$price->getSku()] : [];
             $this->checkPriceType($price, $ids, $key, $validationResult);
             $this->checkQuantity($price, $key, $validationResult);
             $this->checkWebsite($price, $key, $validationResult);

@@ -322,7 +322,7 @@ class PackagePool
      */
     private function getOption($name, $options)
     {
-        return $options[$name] ?? null;
+        return isset($options[$name]) ? $options[$name] : null;
     }
 
     /**

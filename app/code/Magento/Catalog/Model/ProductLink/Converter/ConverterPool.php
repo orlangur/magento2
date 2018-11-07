@@ -34,6 +34,8 @@ class ConverterPool
      */
     public function getConverter($linkType)
     {
-        return $this->converters[$linkType] ?? $this->converters[$this->defaultConverterCode];
+        return isset($this->converters[$linkType])
+            ? $this->converters[$linkType]
+            : $this->converters[$this->defaultConverterCode];
     }
 }

@@ -149,7 +149,7 @@ class AbstractAction
                     'nullable' => $fieldProp['nullable'],
                     'unsigned' => $fieldProp['unsigned'],
                     'default' => $default,
-                    'primary' => $fieldProp['primary'] ?? false
+                    'primary' => isset($fieldProp['primary']) ? $fieldProp['primary'] : false
                 ],
                 $fieldProp['comment'] != '' ? $fieldProp['comment'] : ucwords(str_replace('_', ' ', $fieldName))
             );
@@ -475,7 +475,11 @@ class AbstractAction
     {
         $values = [];
         foreach (array_keys($this->getColumns()) as $column) {
-            $values[$column] = $data[$column] ?? null;
+            if (isset($data[$column])) {
+                $values[$column] = $data[$column];
+            } else {
+                $values[$column] = null;
+            }
         }
         return $values;
     }

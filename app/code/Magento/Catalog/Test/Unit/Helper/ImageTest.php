@@ -318,7 +318,7 @@ class ImageTest extends \PHPUnit\Framework\TestCase
 
         $this->prepareAttributes($data, $imageId);
 
-        $height = $data['height'] ?? $data['width'];
+        $height = isset($data['height']) ? $data['height'] : $data['width'];
 
         $this->helper->init($productMock, $imageId, $attributes);
         $this->assertEquals($height, $this->helper->getHeight());

@@ -157,7 +157,7 @@ class Stopwords implements PreprocessorInterface
         $storeId = $this->storeManager->getStore()->getId();
         $this->localeResolver->emulate($storeId);
         $locale = $this->localeResolver->getLocale();
-        $stopwordsFile = $stopwordsInfo[$locale] ?? $stopwordsInfo['default'];
+        $stopwordsFile = isset($stopwordsInfo[$locale]) ? $stopwordsInfo[$locale] : $stopwordsInfo['default'];
         return $stopwordsFile;
     }
 

@@ -134,10 +134,10 @@ class Save extends \Magento\Catalog\Controller\Adminhtml\Category implements Htt
         $categoryPostData = $this->stringToBoolConverting($categoryPostData);
         $categoryPostData = $this->imagePreprocessing($categoryPostData);
         $categoryPostData = $this->dateTimePreprocessing($category, $categoryPostData);
-        $storeId = $categoryPostData['store_id'] ?? null;
+        $storeId = isset($categoryPostData['store_id']) ? $categoryPostData['store_id'] : null;
         $store = $this->storeManager->getStore($storeId);
         $this->storeManager->setCurrentStore($store->getCode());
-        $parentId = $categoryPostData['parent'] ?? null;
+        $parentId = isset($categoryPostData['parent']) ? $categoryPostData['parent'] : null;
         if ($categoryPostData) {
             $category->addData($categoryPostData);
             if ($parentId) {

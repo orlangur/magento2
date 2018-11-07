@@ -53,12 +53,12 @@ class Converter
         $ruleCondition = $this->ruleConditionFactory->create();
 
         $ruleCondition->setType($conditionArray['type']);
-        $ruleCondition->setAggregator($conditionArray['aggregator'] ?? false);
-        $ruleCondition->setAttribute($conditionArray['attribute'] ?? false);
-        $ruleCondition->setOperator($conditionArray['operator'] ?? false);
-        $ruleCondition->setValue($conditionArray['value'] ?? false);
+        $ruleCondition->setAggregator(isset($conditionArray['aggregator']) ? $conditionArray['aggregator'] : false);
+        $ruleCondition->setAttribute(isset($conditionArray['attribute']) ? $conditionArray['attribute'] : false);
+        $ruleCondition->setOperator(isset($conditionArray['operator']) ? $conditionArray['operator'] : false);
+        $ruleCondition->setValue(isset($conditionArray['value']) ? $conditionArray['value'] : false);
         $ruleCondition->setIsValueParsed(
-            $conditionArray['is_value_parsed'] ?? false
+            isset($conditionArray['is_value_parsed']) ? $conditionArray['is_value_parsed'] : false
         );
 
         if (isset($conditionArray['conditions']) && is_array($conditionArray['conditions'])) {

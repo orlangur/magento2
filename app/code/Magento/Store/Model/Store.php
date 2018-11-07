@@ -1349,7 +1349,7 @@ class Store extends AbstractExtensibleModel implements
     public function getStorePath()
     {
         $parsedUrl = parse_url($this->getBaseUrl());
-        return $parsedUrl['path'] ?? '/';
+        return isset($parsedUrl['path']) ? $parsedUrl['path'] : '/';
     }
 
     /**

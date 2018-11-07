@@ -52,7 +52,7 @@ class ProductFieldset implements \Magento\Framework\Indexer\FieldsetInterface
     {
         $searchableAttributes = $this->getSearchableAttributes();
 
-        $defaultSource = $data['source'] ?? null;
+        $defaultSource = isset($data['source']) ? $data['source'] : null;
         $additionalFields = $this->convert($searchableAttributes, $defaultSource, null);
 
         $data['fields'] = $this->merge($data['fields'], $additionalFields);

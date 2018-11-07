@@ -43,7 +43,7 @@ class YtdStart extends \Magento\Config\Block\System\Config\Form\Field
         )->setValues(
             $_months
         )->setValue(
-            $values[0] ?? null
+            isset($values[0]) ? $values[0] : null
         )->getElementHtml();
 
         $_daysHtml = $element->setStyle(
@@ -51,7 +51,7 @@ class YtdStart extends \Magento\Config\Block\System\Config\Form\Field
         )->setValues(
             $_days
         )->setValue(
-            $values[1] ?? null
+            isset($values[1]) ? $values[1] : null
         )->getElementHtml();
 
         return sprintf('%s %s', $_monthsHtml, $_daysHtml);

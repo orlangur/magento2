@@ -239,7 +239,11 @@ class AbstractCollection extends \Magento\Eav\Model\Entity\Collection\AbstractCo
      */
     protected function _joinAttributeToSelect($method, $attribute, $tableAlias, $condition, $fieldCode, $fieldAlias)
     {
-        $storeId = $this->_joinAttributes[$fieldCode]['store_id'] ?? $this->getStoreId();
+        if (isset($this->_joinAttributes[$fieldCode]['store_id'])) {
+            $storeId = $this->_joinAttributes[$fieldCode]['store_id'];
+        } else {
+            $storeId = $this->getStoreId();
+        }
 
         $connection = $this->getConnection();
 

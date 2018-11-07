@@ -197,7 +197,7 @@ class Mapper
                 $filterQuery = $this->filterBuilder->build($query->getReference(), $conditionType);
                 foreach ($filterQuery['bool'] as $condition => $filter) {
                     $selectQuery['bool'][$condition]= array_merge(
-                        $selectQuery['bool'][$condition] ?? [],
+                        isset($selectQuery['bool'][$condition]) ? $selectQuery['bool'][$condition] : [],
                         $filter
                     );
                 }

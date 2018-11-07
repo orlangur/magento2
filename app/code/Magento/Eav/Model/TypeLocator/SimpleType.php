@@ -59,7 +59,8 @@ class SimpleType implements CustomAttributeTypeLocatorInterface
             'datetime' => TypeProcessor::NORMALIZED_STRING_TYPE,
             'decimal' => TypeProcessor::NORMALIZED_DOUBLE_TYPE,
         ];
-        return $backendTypeMap[$backendType] ?? TypeProcessor::NORMALIZED_ANY_TYPE;
+        return isset($backendTypeMap[$backendType])
+            ? $backendTypeMap[$backendType] : TypeProcessor::NORMALIZED_ANY_TYPE;
     }
 
     /**

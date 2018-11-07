@@ -200,7 +200,7 @@ class Webapi extends \Magento\Backend\Block\Widget\Form\Generic implements
             }
         );
         $configResource = reset($configResource);
-        return $configResource['children'] ?? [];
+        return isset($configResource['children']) ? $configResource['children'] : [];
     }
 
     /**

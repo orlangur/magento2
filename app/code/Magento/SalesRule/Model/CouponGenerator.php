@@ -82,7 +82,7 @@ class CouponGenerator
     private function convertCouponSpecData(array $data)
     {
         foreach ($this->keyMap as $mapKey => $mapValue) {
-            $data[$mapKey] = $data[$mapValue] ?? null;
+            $data[$mapKey] = isset($data[$mapValue]) ? $data[$mapValue] : null;
         }
 
         return $data;

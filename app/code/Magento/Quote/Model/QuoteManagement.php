@@ -427,7 +427,7 @@ class QuoteManagement implements \Magento\Quote\Api\CartManagementInterface
                     ['parent_item' => null]
                 );
             }
-            $parentItem = $orderItems[$parentItemId] ?? null;
+            $parentItem = isset($orderItems[$parentItemId]) ? $orderItems[$parentItemId] : null;
             $orderItems[$itemId] = $this->quoteItemToOrderItem->convert($quoteItem, ['parent_item' => $parentItem]);
         }
         return array_values($orderItems);

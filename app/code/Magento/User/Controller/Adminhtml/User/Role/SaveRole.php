@@ -220,7 +220,7 @@ class SaveRole extends \Magento\User\Controller\Adminhtml\User\Role implements H
         if ($data['all']) {
             $this->_getSession()->setData(self::RESOURCE_ALL_FORM_DATA_SESSION_KEY, $data['all']);
         } else {
-            $resource = $data['resource'] ?? [];
+            $resource = isset($data['resource']) ? $data['resource'] : [];
             $this->_getSession()->setData(self::RESOURCE_FORM_DATA_SESSION_KEY, $resource);
         }
         $arguments = $role->getId() ? ['rid' => $role->getId()] : [];

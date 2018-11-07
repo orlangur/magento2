@@ -149,7 +149,9 @@ abstract class AbstractCustomer extends \Magento\ImportExport\Model\Import\Entit
         if (!isset($data['page_size'])) {
             $data['page_size'] = $this->_pageSize;
         }
-        $this->_customerStorage = $data['customer_storage'] ?? $this->_storageFactory->create(
+        $this->_customerStorage = isset(
+            $data['customer_storage']
+        ) ? $data['customer_storage'] : $this->_storageFactory->create(
             ['data' => $data]
         );
 

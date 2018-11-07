@@ -303,17 +303,26 @@ abstract class AbstractEntity
         array $data = []
     ) {
         $this->_scopeConfig = $scopeConfig;
-        $this->_dataSourceModel = $data['data_source_model'] ?? $importFactory->create()->getDataSourceModel();
+        $this->_dataSourceModel = isset(
+            $data['data_source_model']
+        ) ? $data['data_source_model'] : $importFactory->create()->getDataSourceModel();
         $this->_connection =
-            $data['connection'] ??
+            isset($data['connection']) ?
+            $data['connection'] :
             $resource->getConnection();
         $this->string = $string;
-        $this->_pageSize = $data['page_size'] ?? (static::XML_PATH_PAGE_SIZE ? (int)$this->_scopeConfig->getValue(
+        $this->_pageSize = isset(
+            $data['page_size']
+        ) ? $data['page_size'] : (static::XML_PATH_PAGE_SIZE ? (int)$this->_scopeConfig->getValue(
             static::XML_PATH_PAGE_SIZE,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         ) : 0);
-        $this->_maxDataSize = $data['max_data_size'] ?? $resourceHelper->getMaxDataSize();
-        $this->_bunchSize = $data['bunch_size'] ?? (static::XML_PATH_BUNCH_SIZE ? (int)$this->_scopeConfig->getValue(
+        $this->_maxDataSize = isset(
+            $data['max_data_size']
+        ) ? $data['max_data_size'] : $resourceHelper->getMaxDataSize();
+        $this->_bunchSize = isset(
+            $data['bunch_size']
+        ) ? $data['bunch_size'] : (static::XML_PATH_BUNCH_SIZE ? (int)$this->_scopeConfig->getValue(
             static::XML_PATH_BUNCH_SIZE,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         ) : 0);

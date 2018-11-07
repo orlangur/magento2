@@ -158,7 +158,7 @@ class TableBuilder
                 $temporaryTableBuilder->addColumn(
                     $columnName,
                     $column['type'],
-                    $column['length'] ?? null
+                    isset($column['length']) ? $column['length'] : null
                 );
 
                 $columnValueName = $attributeCode . $valueFieldSuffix;
@@ -167,7 +167,7 @@ class TableBuilder
                     $valueTemporaryTableBuilder->addColumn(
                         $columnValueName,
                         $columnValue['type'],
-                        $columnValue['length'] ?? null
+                        isset($columnValue['length']) ? $columnValue['length'] : null
                     );
                 }
             }

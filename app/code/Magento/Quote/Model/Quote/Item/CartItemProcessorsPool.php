@@ -46,10 +46,11 @@ class CartItemProcessorsPool
         $arguments = $this->objectManagerConfig->getArguments($typePreference);
         if (isset($arguments['cartItemProcessors'])) {
             // Workaround for compiled mode.
-            $processors = $arguments['cartItemProcessors']['_vac_']
-                ?? $arguments['cartItemProcessors'];
+            $processors = isset($arguments['cartItemProcessors']['_vac_'])
+                ? $arguments['cartItemProcessors']['_vac_']
+                : $arguments['cartItemProcessors'];
             foreach ($processors as $name => $processor) {
-                $className = $processor['instance'] ?? $processor['_i_'];
+                $className = isset($processor['instance']) ? $processor['instance'] : $processor['_i_'];
                 $this->cartItemProcessors[$name] = ObjectManager::getInstance()->get($className);
             }
         }

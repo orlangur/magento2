@@ -472,7 +472,7 @@ class Transaction extends AbstractModel implements TransactionInterface
             $info = [];
         }
         if ($key) {
-            return $info[$key] ?? null;
+            return isset($info[$key]) ? $info[$key] : null;
         }
         return $info;
     }

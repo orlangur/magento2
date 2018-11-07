@@ -75,8 +75,9 @@ class ComplexType implements ServiceTypeListInterface, CustomAttributeTypeLocato
             $backendModel = class_exists($backendModelClass) ? $backendModelClass : null;
         }
 
-        $dataInterface = $attributeTypeMap[$backendModel]
-            ?? TypeProcessor::NORMALIZED_ANY_TYPE;
+        $dataInterface = isset($attributeTypeMap[$backendModel])
+            ? $attributeTypeMap[$backendModel]
+            : TypeProcessor::NORMALIZED_ANY_TYPE;
 
         return $dataInterface;
     }

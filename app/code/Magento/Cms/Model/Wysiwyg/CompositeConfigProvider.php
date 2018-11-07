@@ -155,8 +155,9 @@ class CompositeConfigProvider
     {
         $adapterType = $this->getActiveEditorPath($config);
         //Extension point to update plugin settings by adapter type
-        $providerClass = $configProviders[$adapterType]
-            ?? $configProviders['default'];
+        $providerClass = isset($configProviders[$adapterType])
+            ? $configProviders[$adapterType]
+            : $configProviders['default'];
         /** @var \Magento\Framework\Data\Wysiwyg\ConfigProviderInterface $provider */
         $provider = $this->configProviderFactory->create($providerClass);
         return $provider->getConfig($config);

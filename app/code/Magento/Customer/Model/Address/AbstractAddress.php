@@ -230,7 +230,7 @@ class AbstractAddress extends AbstractExtensibleModel implements AddressModelInt
     public function getStreetLine($number)
     {
         $lines = $this->getStreet();
-        return $lines[$number - 1] ?? '';
+        return isset($lines[$number - 1]) ? $lines[$number - 1] : '';
     }
 
     /**

@@ -50,7 +50,7 @@ class Price extends Column
     {
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as & $item) {
-                $currencyCode = $item['base_currency_code'] ?? null;
+                $currencyCode = isset($item['base_currency_code']) ? $item['base_currency_code'] : null;
                 $item[$this->getData('name')] = $this->priceFormatter->format(
                     $item[$this->getData('name')],
                     false,

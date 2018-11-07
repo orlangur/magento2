@@ -30,7 +30,7 @@ class Link extends \Magento\Framework\Model\AbstractExtensibleModel implements
      */
     protected function _get($key)
     {
-        return $this->_data[$key] ?? null;
+        return isset($this->_data[$key]) ? $this->_data[$key] : null;
     }
 
     /**

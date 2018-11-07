@@ -18,7 +18,7 @@ class Db implements \Magento\Framework\Config\ConverterInterface
      */
     public function convert($source)
     {
-        $cronTab = $source['crontab'] ?? [];
+        $cronTab = isset($source['crontab']) ? $source['crontab'] : [];
 
         if (empty($cronTab)) {
             return $cronTab;

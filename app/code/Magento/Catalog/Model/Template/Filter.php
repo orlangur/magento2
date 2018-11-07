@@ -161,7 +161,7 @@ class Filter extends \Magento\Framework\Filter\Template
             $params['_direct'] = $params['direct_url'];
             unset($params['direct_url']);
         } else {
-            $path = $params['url'] ?? '';
+            $path = isset($params['url']) ? $params['url'] : '';
             unset($params['url']);
         }
 

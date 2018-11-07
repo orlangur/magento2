@@ -103,7 +103,7 @@ class ExtendsMapper extends \Magento\Config\Model\Config\Structure\AbstractMappe
         $pathParts = $this->_transformPathToKeysList($path);
 
         foreach ($pathParts as $part) {
-            $result = $result[$part] ?? null;
+            $result = isset($result[$part]) ? $result[$part] : null;
             if ($result === null) {
                 return $result;
             }

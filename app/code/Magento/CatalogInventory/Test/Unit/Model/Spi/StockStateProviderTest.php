@@ -331,10 +331,10 @@ class StockStateProviderTest extends \PHPUnit\Framework\TestCase
                 ->willReturn($variation['values']['_stock_qty_']);
 
             foreach ($this->stockItemMethods as $method) {
-                $value = $variation['values'][$method] ?? null;
+                $value = isset($variation['values'][$method]) ? $variation['values'][$method] : null;
                 $stockItem->expects($this->any())->method($method)->willReturn($value);
             }
-            $expectedResult = $variation['results'][$methodName] ?? null;
+            $expectedResult = isset($variation['results'][$methodName]) ? $variation['results'][$methodName] : null;
             $variations[] = [
                 'stockItem' => $stockItem,
                 'expectedResult' => $expectedResult,

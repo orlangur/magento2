@@ -103,6 +103,6 @@ abstract class AbstractGrid extends AbstractDb implements GridInterface
 
         $row = $this->getConnection()->fetchRow($select);
 
-        return $row['updated_at'] ?? $default;
+        return isset($row['updated_at']) ? $row['updated_at'] : $default;
     }
 }

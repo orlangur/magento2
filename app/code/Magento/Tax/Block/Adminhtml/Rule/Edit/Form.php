@@ -121,7 +121,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
             'text',
             [
                 'name' => 'code',
-                'value' => $formValues['code'] ?? '',
+                'value' => isset($formValues['code']) ? $formValues['code'] : '',
                 'label' => __('Name'),
                 'class' => 'required-entry',
                 'required' => true
@@ -138,8 +138,9 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
         }
 
         // Use the rule data or pick the first class in the list
-        $selectedCustomerTax = $formValues['tax_customer_class']
-            ?? $selected;
+        $selectedCustomerTax = isset($formValues['tax_customer_class'])
+            ? $formValues['tax_customer_class']
+            : $selected;
         $fieldset->addField(
             'tax_customer_class',
             'editablemultiselect',
@@ -166,8 +167,9 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
         }
 
         // Use the rule data or pick the first class in the list
-        $selectedProductTax = $formValues['tax_product_class']
-            ?? $selected;
+        $selectedProductTax = isset($formValues['tax_product_class'])
+            ? $formValues['tax_product_class']
+            : $selected;
         $fieldset->addField(
             'tax_product_class',
             'editablemultiselect',
@@ -193,7 +195,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                 'label' => __('Tax Rate'),
                 'class' => 'required-entry',
                 'values' => $this->rateSource->toOptionArray(),
-                'value' => $formValues['tax_rate'] ?? [],
+                'value' => isset($formValues['tax_rate']) ? $formValues['tax_rate'] : [],
                 'required' => true,
                 'element_js_class' => 'TaxRateEditableMultiselect',
                 'select_config' => $selectConfig
@@ -207,7 +209,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                 'name' => 'priority',
                 'label' => __('Priority'),
                 'class' => 'validate-not-negative-number',
-                'value' => $formValues['priority'] ?? 0,
+                'value' => isset($formValues['priority']) ? $formValues['priority'] : 0,
                 'required' => true,
                 'note' => __('Tax rates at the same priority are added, others are compounded.')
             ],
@@ -222,7 +224,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                 'name'  => 'calculate_subtotal',
                 'label' => __('Calculate Off Subtotal Only'),
                 'onclick' => 'this.value = this.checked ? 1 : 0;',
-                'checked' => $formValues['calculate_subtotal'] ?? 0
+                'checked' => isset($formValues['calculate_subtotal']) ? $formValues['calculate_subtotal'] : 0
             ],
             false,
             true
@@ -235,7 +237,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                 'name' => 'position',
                 'label' => __('Sort Order'),
                 'class' => 'validate-not-negative-number',
-                'value' => $formValues['position'] ?? 0,
+                'value' => isset($formValues['position']) ? $formValues['position'] : 0,
                 'required' => true
             ],
             false,
@@ -268,7 +270,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
     {
         $config = [
             'is_entity_editable' => true,
-            'selected_values' => $formValues['tax_rate'] ?? []
+            'selected_values' => isset($formValues['tax_rate']) ? $formValues['tax_rate'] : []
         ];
 
         return $config;

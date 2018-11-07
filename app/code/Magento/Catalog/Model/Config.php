@@ -241,7 +241,9 @@ class Config extends \Magento\Eav\Model\Config
         if (!is_numeric($entityTypeId)) {
             $entityTypeId = $this->getEntityType($entityTypeId)->getId();
         }
-        return $this->_attributeSetsById[$entityTypeId][$id] ?? false;
+        return isset(
+            $this->_attributeSetsById[$entityTypeId][$id]
+        ) ? $this->_attributeSetsById[$entityTypeId][$id] : false;
     }
 
     /**
@@ -260,7 +262,9 @@ class Config extends \Magento\Eav\Model\Config
             $entityTypeId = $this->getEntityType($entityTypeId)->getId();
         }
         $name = strtolower($name);
-        return $this->_attributeSetsByName[$entityTypeId][$name] ?? false;
+        return isset(
+            $this->_attributeSetsByName[$entityTypeId][$name]
+        ) ? $this->_attributeSetsByName[$entityTypeId][$name] : false;
     }
 
     /**
@@ -301,7 +305,9 @@ class Config extends \Magento\Eav\Model\Config
         if (!is_numeric($attributeSetId)) {
             $attributeSetId = $this->getAttributeSetId($attributeSetId);
         }
-        return $this->_attributeGroupsById[$attributeSetId][$id] ?? false;
+        return isset(
+            $this->_attributeGroupsById[$attributeSetId][$id]
+        ) ? $this->_attributeGroupsById[$attributeSetId][$id] : false;
     }
 
     /**
@@ -321,7 +327,9 @@ class Config extends \Magento\Eav\Model\Config
             $attributeSetId = $this->getAttributeSetId($attributeSetId);
         }
         $name = strtolower($name);
-        return $this->_attributeGroupsByName[$attributeSetId][$name] ?? false;
+        return isset(
+            $this->_attributeGroupsByName[$attributeSetId][$name]
+        ) ? $this->_attributeGroupsByName[$attributeSetId][$name] : false;
     }
 
     /**
@@ -358,7 +366,7 @@ class Config extends \Magento\Eav\Model\Config
         $this->loadProductTypes();
 
         $name = strtolower($name);
-        return $this->_productTypesByName[$name] ?? false;
+        return isset($this->_productTypesByName[$name]) ? $this->_productTypesByName[$name] : false;
     }
 
     /**
