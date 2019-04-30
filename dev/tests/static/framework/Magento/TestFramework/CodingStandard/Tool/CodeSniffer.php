@@ -89,9 +89,9 @@ class CodeSniffer implements ToolInterface, ExtensionInterface
             return 0;
         }
 
-        if (!defined('PHP_CODESNIFFER_IN_TESTS')) {
-            define('PHP_CODESNIFFER_IN_TESTS', true);
-        }
+//        if (!defined('PHP_CODESNIFFER_IN_TESTS')) {
+//            define('PHP_CODESNIFFER_IN_TESTS', true);
+//        }
 
         $this->wrapper->checkRequirements();
         $settings = [];
@@ -99,6 +99,7 @@ class CodeSniffer implements ToolInterface, ExtensionInterface
         $settings['standards'] = [$this->rulesetDir];
         $settings['extensions'] = $this->extensions;
         $settings['reports']['full'] = $this->reportFile;
+
         $this->wrapper->setSettings($settings);
 
         // phpcs:ignore Magento2.Functions.DiscouragedFunction
