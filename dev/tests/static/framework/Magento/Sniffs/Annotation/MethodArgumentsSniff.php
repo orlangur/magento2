@@ -664,7 +664,7 @@ class MethodArgumentsSniff implements Sniff
             $commentPosition = $commentPositions[$index];
             $type = $paramDefinitions[$index]['type'];
             $paramName = $paramDefinitions[$index]['paramName'];
-            if (($argumentPosition !== strlen($type) + 1) ||
+            if (($argumentPosition !== strlen((string)$type) + 1) ||
                 (isset($commentPosition) && ($commentPosition !== $argumentPosition + strlen($paramName) + 1))) {
                 $flag = false;
                 break;
