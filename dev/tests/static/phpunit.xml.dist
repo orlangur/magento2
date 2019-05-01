@@ -15,15 +15,15 @@
          bootstrap="./framework/bootstrap.php"
 >
     <testsuites>
-        <testsuite name="Less Static Code Analysis">
-            <file>testsuite/Magento/Test/Less/LiveCodeTest.php</file>
-        </testsuite>
+        <!--<testsuite name="Less Static Code Analysis">-->
+            <!--<file>testsuite/Magento/Test/Less/LiveCodeTest.php</file>-->
+        <!--</testsuite>-->
         <testsuite name="PHP Coding Standard Verification">
             <file>testsuite/Magento/Test/Php/LiveCodeTest.php</file>
         </testsuite>
-        <testsuite name="Code Integrity Tests">
-            <directory>testsuite/Magento/Test/Integrity</directory>
-        </testsuite>
+        <!--<testsuite name="Code Integrity Tests">-->
+            <!--<directory>testsuite/Magento/Test/Integrity</directory>-->
+        <!--</testsuite>-->
     </testsuites>
     <php>
         <ini name="date.timezone" value="America/Los_Angeles"/>

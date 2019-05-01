@@ -1,4 +1,4 @@
-#sudo: required
+sudo: required
 dist: trusty
 group: edge
 addons:
@@ -36,7 +36,7 @@ env:
 #    - TEST_SUITE=graphql-api-functional
 matrix:
   exclude:
-    - php: 7.1
+    - php: 7.2
       env: TEST_SUITE=static
     - php: 7.1
       env: TEST_SUITE=js GRUNT_COMMAND=spec
