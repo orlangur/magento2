@@ -265,7 +265,7 @@ class LiveCodeTest extends \PHPUnit\Framework\TestCase
      */
     public function testCodeStyle()
     {
-        $isFullScan = defined('TESTCODESTYLE_IS_FULL_SCAN') && TESTCODESTYLE_IS_FULL_SCAN === '1';
+        $isFullScan = true;
         $reportFile = self::$reportDir . '/phpcs_report.txt';
         if (!file_exists($reportFile)) {
             touch($reportFile);
